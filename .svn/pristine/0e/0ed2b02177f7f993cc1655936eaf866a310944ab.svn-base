@@ -1,0 +1,224 @@
+<?php
+
+/* 
+ Template Name: Home
+ */
+
+get_header();  ?>
+
+
+
+    <div id="banner" style="background-image:url(<?php the_field('banner_image'); ?>)">
+        <div class="container">
+            <div class="bannerInfo">
+                <div id="bannerTtl">
+                    <img src="<?php the_field('banner_image2'); ?>" alt="">
+                    <p class="bannerTxt txt-24 txt-fff text-center">
+                        <?php the_field('banner_text'); ?>
+                    </p>
+                </div>
+                
+                <div class="bannerForm">
+                    <div class="bannerTop">
+                        <img src="<?php the_field('form_background'); ?>" alt="">
+                        <div class="bannerTopIn">
+                            <img src="<?php the_field('banner_form_icon'); ?>" alt="">
+                            <span><?php the_field('banner_form_title'); ?></span>
+                        </div>
+                    </div>
+                    <div class="bannerBottom">
+                        <div class="bannerCols21 bannerCols bannerCols1">
+                            <div class="c-chkbox">
+                            <div class="chkbox">
+<input class="selected" id="checkboxselect" type="radio" name="showlet" value="0,5" checked="">
+<label for="checkboxselect" id="">Return</label> 
+                           </div>
+                        </div>
+                        
+                         <div class="c-chkbox">
+                            <div class="chkbox">
+<input class="selected" id="checkboxselect" type="radio" name="showlet" value="0,5" checked="">
+<label for="checkboxselect" id="">One Way</label> 
+                           </div>
+                        </div>
+                        
+                        </div>
+                        <div class="bannerCols21 bannerCols bannerCols">
+                            <select class="formInput formInput100 bannerInput">
+                                <option value="">From</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bannerCols21 bannerCols">
+                            <select class="formInput formInput100 bannerInput">
+                                <option value="">To</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bannerCols21 bannerCols">
+                            <input id='datetimepicker4' type="text" class="formInput formInput100 bannerInput formInputDate" placeholder="Departure / Arrival">
+                        </div>
+                        
+                        <div class="bannerCols16 bannerCols">
+                            <button class="formButton">Continue</button>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- section -->
+    <section class="section0">
+        <div id="sOffers">
+            <div class="container">
+                <div class="sectionHdr">
+                    <h3><?php the_field('offer_title'); ?> </h3>
+                </div>
+                <div class="sectionInfo">
+                    <div class="row">
+                        <?php if(have_rows('special_offers')): while(have_rows('special_offers')): the_row(); ?>
+                            <div class="col-sm-2">
+                               <div class="sOffersIn">
+                                <div class="sOffersIcon">
+                                    <img src="<?php the_sub_field('image'); ?>" alt="">
+                                </div>
+                                <div class="sOffersTtl">
+                                    <h5><?php the_sub_field('title'); ?></h5>
+                                </div>
+                                </div>
+                            </div>
+                        <?php endwhile; endif; ?>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+                  
+    </section>
+    
+    
+    <!-- section -->
+    <section class="">
+        <div id="eAsia">
+            <div class="container">
+               <div class="section0 borderTop">
+                  <div class="sectionHdr">
+                    <div class="col-sm-4">
+                        <h3><?php the_field('explore_title'); ?></h3>
+                    </div>
+                    
+                    <div class="col-sm-8">
+                        <p class="txt-14"><?php the_field('explore_content'); ?></p>
+                    </div>
+                    <div class="clearfix"></div>
+                    
+                </div>
+                <div class="sectionInfo">
+                    <div class="owl-carousel">
+
+                        <?php if(have_rows('explore_repeater')): while(have_rows('explore_repeater')): the_row(); ?>
+                            <div class="item">
+                               <div class="eAsiaIn">
+                                   <div class="eAsiaInL">
+                                        <div class="eAsiaImg">
+                                            <img src="<?php the_sub_field('image') ?>" alt="">
+                                        </div>
+                                   </div>
+                               
+                                <div class="eAsiaInR">
+                                    <div class="eAsiaInfo">
+                                    <div class="">
+                                    <h6><?php the_sub_field('title') ?></h6>
+                                        <p class="txt-14">
+                                            <?php the_sub_field('from') ?>
+                                        </p>
+                                        <p class="txt-24">
+                                            <?php the_sub_field('currency') ?><span><?php the_sub_field('price') ?></span> 
+                                        </p>
+                                        <a href="<?php the_sub_field('link') ?>"><?php the_sub_field('book_now_button') ?></a>
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        <?php endwhile; endif; ?>
+                    </div> 
+               </div>
+            </div>
+        </div>    
+    </section>
+    
+    <!-- section -->
+    <section class="section01">
+        <div id="eDeals">
+            <div class="container">
+                <div class="sectionHdr">
+                    <h2><?php the_field('deals_title'); ?></h2>
+                    <p class="txt-16 txt-2f2"><?php the_field('deals_description'); ?> <a href="<?php the_field('all_deals_link'); ?>"><?php the_field('all_deals_text'); ?></a></p>
+                </div>
+                <div class="sectionInfo">
+                    <div class="gCols">
+                        <div class="row">
+                            <?php $posts = get_field('deals_relationship');  $i = 0; ?>
+                            <?php foreach ($posts as $post) {
+                                if($i == 0){ ?>
+                                    <div class="col-sm-7">
+                                        <div class="gColsBig gColsIn">
+                                           <a href="<?php the_permalink(); ?>">
+                                                <?php the_post_thumbnail(); ?>
+                                                <div class="gColsInfo">
+                                                    <p class="txt-22 txt-fff"><?php the_title(); ?></p>
+                                                    <?php $image = get_field('extra_image',$post->ID);  if($image){ ?>
+                                                        <img src="<?php echo $image['url']; ?>" alt="" />
+                                                   <?php } ?>
+                                                    
+                                                    <p class="txt-30 txt-fff"><?php echo $post->post_content; ?></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                               <?php  }
+                               $i++;
+                                } ?>
+
+                                <div class="col-sm-5">
+                                  <div class="row">
+                                      <?php $j = 0; foreach ($posts as $post) { 
+                                        if($j == 0){ 
+                                          echo ''; 
+                                        } 
+                                        else{ ?>
+                                          <div class="col-sm-12">
+                                             <div class="gColsSmall gColsIn mb30">
+                                                 <a href="">
+                                                      <?php the_post_thumbnail(); ?>
+                                                      <div class="gColsInfo">
+                                                          <p class="txt-22 txt-fff"><?php the_title(); ?></p>
+                                                          <p class="txt-30 txt-fff"><?php echo $post->post_content; ?></p>
+                                                      </div>
+                                                  </a>
+                                              </div>
+                                         </div>
+
+                                     <?php }
+                                     $j++;
+                                          } ?>
+                                   </div>
+                                </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+
+    
+
+<?php get_footer(); ?>

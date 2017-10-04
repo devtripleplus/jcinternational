@@ -1,0 +1,4 @@
+@font-face {
+	font-family: 'Avenir Oblique';
+	src: url('Avenir-Oblique.ttf') format('truetype');
+}

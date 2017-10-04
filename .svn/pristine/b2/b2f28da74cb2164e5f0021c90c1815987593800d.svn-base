@@ -1,0 +1,807 @@
+<?php
+
+/* 
+ Template Name: Route Map
+ */
+
+get_header();  ?>
+   <div id="aboutPage">
+        <div class="container">
+           <div class="row topHeading">
+              <div class="col-sm-6">
+                  <div class="sectionHdr">
+                       <a href="<?php the_permalink(9); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/back-icon.png" alt=""> <?php echo get_the_title(9); ?></a>
+                        <h1 class="txt-2e3"><?php the_title(); ?></h1>
+                        <hr>
+                    </div>
+              </div>
+              <div class="col-sm-6 routeMap">
+                  <img src="<?php the_field('route_map_back_icon'); ?>" class="pull-right" />
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid nopadding btm-margin40">
+       <div id="map"></div>
+    </div>
+
+   
+   <div class="container-fluid sectionHdr">
+       <div class="container">
+           <div class="row">
+               <div class="col-sm-12">
+                   <h1 class="txt-2e3">Our Destinations</h1>
+                   <p class="txt-18 txt-avMedium btm-margin25">
+                       JC Cambodian flys to best destinations in south east asia, with daily flights starting from bustling cities like singapore and kuala Lumpur to  far eastern heavens like Da Nang, Phuket and Angkor, Select from best fairs available below.
+                   </p>                   
+                   <hr/>
+               </div>
+           </div>
+           
+           <div class="row refineRowgs">
+               <div class="col-sm-12">
+                   <p class="refineGs">
+                     <span>Prices are from </span>
+                     <?php 
+                            $args = array( 
+                                'post_type'   => 'locations',
+                                'post_status' => 'publish',
+                                'posts_per_page' => -1,
+                                'orderby'=> 'title', 
+                                'order' => 'ASC'
+                                );
+
+                            $posts = new WP_Query( $args );
+                        ?>
+                    
+                     <span>
+                      <select class="formInput" name="airportsname" id="airportsname">                      
+                          <?php if($posts->posts): foreach ($posts->posts as  $post) { 
+                            if(get_field("location_shortname") == 'PNH'){ 
+                              $selected = 'selected'; 
+                            }
+                            else{
+                              $selected = '';
+                            }
+                            $select1 .= "<option value='";
+                             $select1 .= get_field('location_shortname',$post->ID);
+                             $select1 .= "' myTag=" . $post->ID . " ".  $selected . ">"; 
+                             $select1 .=  get_the_title($post->ID); 
+                             $select1 .= "</option>";
+                             } 
+                             endif; 
+                            wp_reset_postdata();
+                            echo $select1;
+                          ?>       
+                      </select>
+                      </span>
+                      <span>for</span>
+                      
+                      <span>
+                      <select  class="formInput">                      
+                          <option value="0" selected>Select</option>
+                          <option value="1" selected> Direct</option>
+                          <option value="2" selected>Both Direct and Transit</option>
+                      </select>
+                      </span>
+                      
+                      <span>flights in</span>
+                      
+                      <span>
+                      <select  class="formInput">                      
+                          <option>USD</option>
+                      </select>
+                      </span>
+                      
+                      <span>and include taxes and charges.</span>
+                   </p>
+               </div>
+           </div>
+           
+           <div class="row refinedData">
+               <div class="col-sm-12">
+                   <div class="table table-responsive FlightDetail">
+                       <table class="col-sm-12">                           
+                               <tr>
+                                   <td colspan="2" class="blueColor">Flights from <span class="source">Phnom Penh</span> to <a href="javascript:void(0)"><span class="noofdestination"><?php echo count($posts->posts)-1;?> </span> destinations</a></td>                                   
+                                   <td class="width100px arrowIcongs" style="text-align:center !important;"><a href="javascript:void(0)" class="prev3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/table-left-arrow.png" /></a></td>
+                                   <td class="width100px month1"></td>                                   
+                                   <td class="width100px month2"></td>
+                                   <td class="width100px month3"></td>
+                                   <td class="width20px arrowIcongs"><a href="javascript:void(0)" class="next3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/table-right-arrow.png" /></a></td>
+                               </tr>                               
+                           
+                              <tr>
+                                   <td>&nbsp;</td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td class="fullname-1"></td>
+                                   <td class="shortname-1" style="width:100px;"></td>                                   
+                                   <td></td>
+                                   <td class="month1-1"><a href="#"></a></td>                                   
+                                   <td class="month1-2"><a href="#"></a></td>                                   
+                                   <td class="month1-3"><a href="#"></a></td>                                   
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td class="fullname-2"></td>
+                                   <td class="shortname-2" style="width:100px;"></td>
+                                   <td></td>
+                                   <td class="month2-1"><a href="#"></a></td>                                   
+                                   <td class="month2-2"><a href="#"></a></td>                                   
+                                   <td class="month2-3"><a href="#"></a></td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td>&nbsp;</td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td class="fullname-3"></td>
+                                   <td class="shortname-3" style="width:100px;"></td>
+                                   <td></td>
+                                   <td class="month3-1"><a href="#"></a></td>                                   
+                                   <td class="month3-2"><a href="#"></a></td>                                   
+                                   <td class="month3-3"><a href="#"></td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td class="fullname-4"></td>
+                                   <td class="shortname-4" style="width:100px;"></td>
+                                   <td></td>
+                                   <td class="month4-1"><a href="#"></a></td>                                   
+                                   <td class="month4-2"><a href="#"></a></td>                                   
+                                   <td class="month4-3"><a href="#"></a></td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td class="fullname-5"></td>
+                                   <td class="shortname-5" style="width:100px;"></td>
+                                   <td></td>
+                                   <td class="month5-1"><a href="#"></a></td>                                   
+                                   <td class="month5-2"><a href="#"></a></td>                                   
+                                   <td class="month5-3 "><a href="#"></a></td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td class="fullname-6"></td>
+                                   <td class="shortname-6" style="width:100px;"></td>
+                                   <td></td>
+                                   <td class="month6-1"><a href="#"></a></td>                                   
+                                   <td class="month6-2"><a href="#"></a></td>                                   
+                                   <td class="month6-3"><a href="#"></a></td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td class="fullname-7"></td>
+                                   <td class="shortname-7" style="width:100px;"></td>
+                                   <td></td>
+                                   <td class="month7-1"><a href="#"></a></td>                                   
+                                   <td class="month7-2"><a href="#"></a></td>                                   
+                                   <td class="month7-3"><a href="#"></a></td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td class="fullname-8"></td>
+                                   <td class="shortname-8" style="width:100px;"></td>
+                                   <td></td>
+                                   <td class="month8-1"><a href="#"></a></td>                                   
+                                   <td class="month8-2"><a href="#"></a></td>                                   
+                                   <td class="month8-3"><a href="#"></a></td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td class="fullname-9"></td>
+                                   <td class="shortname-9" style="width:100px;"></td>
+                                   <td></td>
+                                   <td class="month9-1"><a href="#"></a></td>                                   
+                                   <td class="month9-2"><a href="#"></a></td>                                   
+                                   <td class="month9-3"><a href="#"></a></td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td></td>
+                                   <td></td>
+                               </tr>
+                                            
+                       </table>
+                   </div>
+               </div>
+           </div>
+           
+       </div>
+   </div>
+   
+   
+  
+    
+    <?php $locations = array(); 
+    $destinationswithprices = array();
+          $args = array( 
+              'post_type'   => 'locations',
+              'post_status' => 'publish',
+              'posts_per_page' => -1,
+              'orderby'=> 'title', 
+              'order' => 'ASC'
+              );
+
+          $posts = new WP_Query( $args );
+          //print_r($posts);
+          if ( $posts->have_posts() ) : while( $posts->have_posts() ) : $posts->the_post(); 
+              $location = get_the_title();
+              $placeId = get_field('place_id');
+              $latitude = get_field('latitude');
+              $longitude = get_field('longitude');
+              $image = get_the_post_thumbnail_url();
+              $description = get_the_content();
+              $shhortname = get_field('location_shortname');
+              $moreinfolink = get_field('more_info_link');;
+              $daily_flight_startinhg_from_text = get_field('daily_flight_startinhg_from_text');
+              $price = get_field('daily_flight_startinhg_from_price');;
+              $book_now_link = get_field('book_now_link');;
+              $fulladdress = "<h2>$location</h2><img src='$image' class='img-resposive' /><p> $description <a href='$moreinfolink'>More Info</a> </p><br/><h3>$daily_flight_startinhg_from_text</h3><br /> <h1>USD <strong>$price</strong> <a href='$book_now_link'>Book Now</a></h1>";
+
+              $locations[] =  array("location" => $location, "placeId" => $placeId, "lat" => (float) $latitude, "lng" => (float) $longitude, "FullAddress" => $fulladdress,"shortname" => $shhortname);
+              
+
+           wp_reset_postdata(); endwhile;  endif; ?>
+
+<?php
+//echo "<pre>";
+$destinationswithprices = get_field('other_locations',159); 
+$datawithmonth = array();
+for($i=0;$i<12;$i++){
+  $monthprices = array();
+  for ($j=0; $j < count($destinationswithprices); $j++) { 
+    $monthprices[$destinationswithprices[$j][shortname]] = $destinationswithprices[$j][month_and_prices][$i][prices];
+  }
+  $datawithmonth[] = $monthprices;
+}
+/*echo "<pre>";
+print_r($datawithmonth);*/
+$location123 = array();
+foreach ($destinationswithprices as $destinationdetails) {
+  $location123[] = array("fullname" => $destinationdetails[name]->post_title, "shortname" => $destinationdetails[shortname]);
+}
+
+ ?>
+    
+    
+    
+    <!--=====Map======-->
+    
+    
+    <script>
+        
+         jQuery('a[href*="#"]:not([href="#"])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    jQuery('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+         var destinations10 = <?php echo str_replace('\\','',json_encode($location123)); ?>;
+
+         var j = 0;
+         for(var i=0;i<destinations10.length;i++){   
+            j++;
+            jQuery(".FlightDetail .fullname-"+j).text(destinations10[i].fullname);
+            jQuery(".FlightDetail .shortname-"+j).text(destinations10[i].shortname);
+          
+          }
+         var monthsData = [
+                            {"month":"Jan"},{"month":"Feb"},{"month":"Mar"},{"month":"Apr"},{"month":"May"},{"month":"Jun"},{"month":"Jul"},{"month":"Aug"},{"month":"Sep"},{"month":"Oct"},{"month":"Nov"},{"month":"Dec"}
+                            ]
+         
+
+        var priceData = <?php echo str_replace('\\','',json_encode($datawithmonth)); ?>;
+
+        var locationData = <?php echo str_replace('\\','',json_encode($locations)); ?>;
+        
+
+        
+        
+      var marker1, marker2=new Array(10);
+      var poly, geodesicPoly=new Array(10);
+    var styles=[
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#bdbdbd"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#eeeeee"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e5e5e5"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dadada"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e5e5e5"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#eeeeee"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#c9c9c9"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  }
+]; 
+    var count=1;
+    var map ;
+    var initialpointlat = 11.5448729;
+    var initialpointlng = 104.8921668;
+    var lastpointlat = 50.0379326;
+    var lastpointlng = 8.5599631;
+       jQuery("#airportsname").on('change', function(){
+          var shoname = jQuery(this).val();
+          var post_id = jQuery("#airportsname option:selected").attr("myTag");
+          for(var i=0;i<locationData.length;i++){ 
+            if(shoname == locationData[i].shortname ){
+              initialpointlat = locationData[i].lat;
+              initialpointlng = locationData[i].lng;
+              if(shoname == 'FRA'){
+                lastpointlat = locationData[i+1].lat;
+                lastpointlng = locationData[i+1].lng;
+              }
+              else{
+                   lastpointlat = 50.0379326;
+                   lastpointlng = 8.5599631;
+              }
+              initMap();
+              map.setZoom(4);
+            }
+          }
+          jQuery.ajax({
+            type: "post",
+            url:  "http://wecodelogix.com/jcinternational/ajax-page-for-pricedata/",
+            data: {postid: post_id},
+            success: function (data) {
+              destinations10 = JSON.parse(data);
+              priceData = destinations10[1];
+              var j = 0;
+              jQuery(".noofdestination").text(destinations10[0].length);
+              for(var i=0;i<destinations10[0].length;i++){   
+                j++;
+                jQuery(".FlightDetail .fullname-"+j).text(destinations10[0][i].fullname);
+                jQuery(".FlightDetail .shortname-"+j).text(destinations10[0][i].shortname);
+              }
+              if(count==1){
+                  var sn = 1;
+                for(var p=1;p<4;p++){                
+                    var j=p-1;
+                    var i = 1;
+                    jQuery(".FlightDetail .month"+sn+"").text(monthsData[j].month);
+                    jQuery.each(priceData[j], function(k, v) {
+                    jQuery(".FlightDetail .month"+ i++ +"-"+sn).html("<a href='#' class='blueColor' data-id='"+ i +"'>"+ v +"</a>");
+                    });
+                    sn++;
+                    jQuery(".FlightDetail a:contains('*')").each(function(){ jQuery(this).removeClass("blueColor"); });
+                    
+                    jQuery(".FlightDetail a:contains('.')").each(function(){ 
+                        var res=jQuery(this).text().split('.');
+                        jQuery(this).html(res[0]+".<small>"+res[1]+"</small>");                    
+                    });
+                }
+              }
+
+
+
+
+                    }
+           });
+        });
+        
+        
+         /* jQuery.each(priceData, function(key, value) {
+             jQuery.each(value, function(k, v) {
+               console.log(k +" is "+ v);
+             });
+          });*/
+        
+        
+        //$(function(){
+        if(count==1){
+          var kr = 1;
+          for(var p=1;p<4;p++){                
+            var j=p-1;
+            var i = 1;
+            jQuery(".FlightDetail .month"+kr+"").text(monthsData[j].month);
+            jQuery.each(priceData[j], function(k, v) {
+             jQuery(".FlightDetail .month"+ i++ +"-"+kr).html("<a href='#' class='blueColor' data-id='"+ i +"'>"+ v +"</a>");
+            });
+            kr++;
+            jQuery(".FlightDetail a:contains('*')").each(function(){ jQuery(this).removeClass("blueColor"); });
+            jQuery(".FlightDetail a:contains('.')").each(function(){ 
+              var res=jQuery(this).text().split('.');
+              jQuery(this).html(res[0]+".<small>"+res[1]+"</small>");                    
+            });
+          }
+        }
+        
+        
+        
+        
+        jQuery(".arrowIcongs .prev3").click(function(){     
+            var shortname = jQuery("#airportsname").val();       
+            console.log(shortname);
+            if(count > 1){
+                count-=1;
+            for(var k=count;k<count+3;k++){                
+                var j=k-1;
+                var i = 1;
+                var sn=k-count+1;
+                jQuery(".FlightDetail .month"+sn+"").text(monthsData[j].month);
+                jQuery.each(priceData[j], function(k, v) {
+                jQuery(".FlightDetail .month"+ i++ +"-"+sn).html("<a href='#' class='blueColor' data-id='"+ i +"'>"+ v +"</a>");
+                });
+                
+                jQuery(".FlightDetail a:contains('*')").each(function(){ jQuery(this).removeClass("blueColor"); });
+                
+                 jQuery(".FlightDetail a:contains('.')").each(function(){ 
+                    var res=jQuery(this).text().split('.');
+                    jQuery(this).html(res[0]+".<small>"+res[1]+"</small>");                    
+                });
+            }
+                }
+        });
+        
+        jQuery(".arrowIcongs .next3").click(function(){   
+            var shortname = jQuery("#airportsname").val();      
+            console.log(shortname);         
+            if(count < 10){
+                count+=1;
+            for(var k=count;k<count+3;k++){                
+                var j=k-1;
+                var i = 1;
+                var sn=k-count+1;
+                jQuery(".FlightDetail .month"+sn+"").text(monthsData[j].month);
+                jQuery.each(priceData[j], function(k, v) {
+                jQuery(".FlightDetail .month"+ i++ +"-"+sn).html("<a href='#' class='blueColor' data-id='"+ i +"'>"+ v +"</a>");
+                });
+                
+                jQuery(".FlightDetail a:contains('*')").each(function(){ jQuery(this).removeClass("blueColor"); });
+                 jQuery(".FlightDetail a:contains('.')").each(function(){ 
+                    var res=jQuery(this).text().split('.');
+                    jQuery(this).html(res[0]+".<small>"+res[1]+"</small>");                    
+                });
+            }
+                }
+        });
+
+
+
+
+
+        function initMap() {
+          
+        map  = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          scrollwheel: false,
+          center:new google.maps.LatLng(51.508742,-0.120850),
+          styles: styles,
+          zoomControl: true,
+          zoomControlOptions: {
+              position: google.maps.ControlPosition.LEFT_BOTTOM
+          },
+          fullscreenControl: true
+        });
+        
+         //===Orgin of the map
+        marker1 = new google.maps.Marker({
+          map: map, 
+          draggable: false,
+          position: {lat: initialpointlat, lng: initialpointlng },
+            icon:{url:"<?php echo get_template_directory_uri(); ?>/assets/img/map-origin-icon.png",
+            anchor: new google.maps.Point(14, 14)}
+        });
+          
+          //===Other Location of map
+          //alert(locationData.length);
+          for(var i=0;i<locationData.length;i++){               
+                marker2[i] = new google.maps.Marker({
+                    map: map,
+                    draggable: false,
+                    position: {lat: locationData[i].lat, lng: locationData[i].lng},
+                    icon:" "                    
+                }); 
+               
+              
+              if( locationData[i].placeId!=""){
+                  
+                var infowindow = new google.maps.InfoWindow();
+                var service = new google.maps.places.PlacesService(map);
+
+                service.getDetails({
+                  placeId: locationData[i].placeId                    
+                }, function(place, status) {                    
+                  if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: place.geometry.location,
+                        icon:{url:"<?php echo get_template_directory_uri(); ?>/assets/img/list-red-icon.png",anchor: new google.maps.Point(10, 10)}
+                    });
+                      
+                      
+                    google.maps.event.addListener(marker, 'click', function() {
+                        var placeId=place.place_id;
+                         for(var i=0;i<locationData.length;i++){    
+                             if(locationData[i].placeId==placeId){                                 
+                                var boxText = document.createElement("div");
+		boxText.style.cssText = "margin-bottom: 30px; margin-left: 6px; background: #fff; padding: 5px;";
+		boxText.innerHTML = "<div class='locationDiv'>"+locationData[i].FullAddress+"</div>";
+            jQuery("img[src='http://www.google.com/intl/en_us/mapfiles/close.gif']").trigger("click");
+            var myOptions = {
+			 content: boxText,
+            disableAutoPan: false,
+            maxWidth: 0,
+            pixelOffset: new google.maps.Size(0, 0),
+                zIndex: null,
+                boxStyle: { 
+                    padding: "0px 0px 0px 100px",
+			         background: "url('<?php echo get_template_directory_uri(); ?>/assets/img/map-right-side.png') no-repeat",
+                    opacity: 1,
+                    width: "465px"                    
+			 },
+                closeBoxMargin: "15px",
+                closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif",
+                infoBoxClearance: new google.maps.Size(1, 1),
+                isHidden: false,
+                pane: "floatPane",
+                enableEventPropagation: false
+		};
+            
+            var ib = new InfoBox(myOptions);
+                                 //infowindow.setContent("<div class='locationDiv'>"+locationData[i].FullAddress+"</div>");
+                         }
+                         }
+                      //infowindow.open(map, this);                     
+                        ib.open(map, this);  
+                    });
+                  }
+                });
+              }
+          }
+                              
+                   
+          var location;
+          var bounds1;
+          for(var i=0;i<locationData.length;i++){              
+         bounds1= new google.maps.LatLngBounds(marker1.getPosition(), marker2[i].getPosition());
+          }
+          
+        var bounds= new google.maps.LatLngBounds(marker1.getPosition());
+        
+        map.fitBounds(bounds);
+        
+        for(var i=0;i<locationData.length;i++){               
+              google.maps.event.addListener(marker2[i]);                      
+          }
+          
+        google.maps.event.addListener(marker1, 'position_changed', update);  
+
+        poly = new google.maps.Polyline({
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 3,
+          map: map,
+        });
+
+          for(var i=0;i<locationData.length;i++){
+            geodesicPoly[i] = new google.maps.Polyline({
+              strokeColor: '#9092c2',                
+              strokeOpacity: 1.0,
+              strokeWeight: 3,
+              geodesic: true,
+              map: map
+            });
+          }
+
+           var lineSymbol = {
+                path: 'M362.985,430.724l-10.248,51.234l62.332,57.969l-3.293,26.145 l-71.345-23.599l-2.001,13.069l-2.057-13.529l-71.278,22.928l-5.762-23.984l64.097-59.271l-8.913-51.359l0.858-114.43 l-21.945-11.338l-189.358,88.76l-1.18-32.262l213.344-180.08l0.875-107.436l7.973-32.005l7.642-12.054l7.377-3.958l9.238,3.65 l6.367,14.925l7.369,30.363v106.375l211.592,182.082l-1.496,32.247l-188.479-90.61l-21.616,10.087l-0.094,115.684',
+                scale: 0.06, 
+                strokeOpacity: 1,
+                fillColor: '#ed1c24',          
+                strokeWeight: 3,
+                anchor: new google.maps.Point(340,400),               
+                strokeColor: '#ed1c24'
+              };
+          
+          // Create the polyline and add the symbol to it via the 'icons' property.
+        var line = new google.maps.Polyline({
+          path: [{lat: initialpointlat, lng: initialpointlng}, {lat: lastpointlat, lng: lastpointlng}],
+            geodesic: true,
+            strokeColor: '#9092c2',
+          icons: [{
+            icon: lineSymbol,
+            offset: '100%'
+          }],
+          map: map
+        });
+
+        animateCircle(line);  
+        update();
+      }
+
+      function update() {          
+        var path=Array(10);
+           for(var i=0;i<locationData.length;i++){               
+               path[i]=[marker1.getPosition(), marker2[i].getPosition()];               
+               geodesicPoly[i].setPath(path[i]);               
+           }
+      }
+        
+        
+        
+         
+// Use the DOM setInterval() function to change the offset of the symbol
+// at fixed intervals.
+function animateCircle(line) {
+    var count = 0;
+    window.setInterval(function() {
+      count = (count + 0.1) % 200;
+
+      var icons = line.get('icons');
+      icons[0].offset = (count / 2) + '%';
+      line.set('icons', icons);
+  }, 20);
+}
+        
+    
+    setTimeout(function(){
+         map.setZoom(4);
+    },500)
+
+
+       
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMtEH2rnetuGfmzSVLHmwkyTiipddoQec&#038;libraries=places&callback=initMap" ></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/infobox/src/infobox.js" ></script>
+
+    
+
+<?php get_footer(); ?>

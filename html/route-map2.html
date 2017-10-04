@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/owl.carousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/controls.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/date.picker/css/bootstrap-datetimepicker-standalone.css">
+    <link rel="stylesheet" href="assets/date.picker/css/bootstrap-datetimepicker.min.css">
+        
+</head>
+
+<div class="wrapper">
+     <header id="header">
+        <div class="mainHeader">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile bgcdisplay -->
+                <div class="navbar-header">                    
+                    <a class="navbar-brand" href="#"><img src="assets/img/logo1.png" alt=""></a>
+                    
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> 
+                        <span class="sr-only">Toggle navigation</span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                    </button>
+                    
+                    <ul id="mobileNav" class="nav navbar-nav navbar-right visible-xs">
+                        <li><a href=""><img src="assets/img/iconSearch.png" alt=""></a></li>
+                          <li><select name="" id="" class="formInput formInput100">
+                            <option value="">EN</option>
+                        </select></li>
+                    </ul>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="" href="">Bookings</a></li>
+                        <li><a href="">Manage Booking</a></li>
+                        <li><a href="">JC Rewards</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li class="hidden-xs"><a href=""><img src="assets/img/iconSearch.png" alt=""></a></li>
+                        <li  class="hidden-xs"><select name="" id="" class="formInput formInput100">
+                                                <option value="">EN</option>
+                                                </select>
+                        </li>
+                    </ul>
+                    
+                    <div class="clearfix"></div>
+                </div>
+                 <div class="clearfix"></div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+    </header>
+    <!-- / HEADER -->
+
+    <!-- section -->
+    
+    <div id="aboutPage">
+        <div class="container">
+           <div class="row topHeading">
+              <div class="col-sm-6">
+                  <div class="sectionHdr">
+                       <a href="#"><img src="assets/img/back-icon.png" alt=""> Bookings</a>
+                        <h1 class="txt-2e3">Route Map</h1>
+                        <hr>
+                    </div>
+              </div>
+              <div class="col-sm-6 routeMap">
+                  <img src="assets/img/rout-map-icon.png" class="pull-right" />
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid nopadding btm-margin40">
+       <div id="map"></div>
+    </div>
+
+   
+   <div class="container-fluid sectionHdr">
+       <div class="container">
+           <div class="row">
+               <div class="col-sm-12">
+                   <h1 class="txt-2e3">Our Destinations</h1>
+                   <p class="txt-18 txt-avMedium btm-margin25">
+                       JC Cambodian flys to best destinations in south east asia, with daily flights starting from bustling cities like singapore and kuala Lumpur to  far eastern heavens like Da Nang, Phuket and Angkor, Select from best fairs available below.
+                   </p>                   
+                   <hr/>
+               </div>
+           </div>
+           
+           <div class="row refineRowgs">
+               <div class="col-sm-12">
+                   <p class="refineGs">
+                     <span>Prices are from </span>
+                    
+                     <span>
+                      <select class="formInput">                      
+                          <option>Phnom Penh</option>
+                      </select>
+                      </span>
+                      <span>for</span>
+                      
+                      <span>
+                      <select  class="formInput">                      
+                          <option>Both Direct and Transit</option>
+                      </select>
+                      </span>
+                      
+                      <span>flights in</span>
+                      
+                      <span>
+                      <select  class="formInput">                      
+                          <option>USD</option>
+                      </select>
+                      </span>
+                      
+                      <span>and include taxes and charges.</span>
+                   </p>
+               </div>
+           </div>
+           
+           <div class="row refinedData">
+               <div class="col-sm-12">
+                   <div class="table table-responsive FlightDetail">
+                       <table class="col-sm-12">                           
+                               <tr>
+                                   <td colspan="2" class="blueColor">Flights from Phnom Penh <a href="#">12 destinations</a></td>                                   
+                                   <td class="width100px arrowIcongs" style="text-align:center !important;"><a href="javascript:void(0)" class="prev3"><img src="assets/img/table-left-arrow.png" /></a></td>
+                                   <td class="width100px month1"></td>                                   
+                                   <td class="width100px month2"></td>
+                                   <td class="width100px month3"></td>
+                                   <td class="width20px arrowIcongs"><a href="javascript:void(0)" class="next3"><img src="assets/img/table-right-arrow.png" /></a></td>
+                               </tr>                               
+                           
+                              <tr>
+                                   <td>&nbsp;</td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td>Siem Reap</td>
+                                   <td style="width:100px;">(REP)</td>                                   
+                                   <td></td>
+                                   <td class="month1-rep"><a href="#"></a></td>                                   
+                                   <td class="month2-rep"><a href="#"></a></td>                                   
+                                   <td class="month3-rep"><a href="#"></a></td>                                   
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td>Sihanukville</td>
+                                   <td>(KOS)</td>
+                                   <td></td>
+                                   <td class="month1-kos"><a href="#"></a></td>                                   
+                                   <td class="month1-kos"><a href="#"></a></td>                                   
+                                   <td class="month1-kos"><a href="#"></a></td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td>&nbsp;</td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td>Ho Chi Minh City</td>
+                                   <td>(SGN)</td>
+                                   <td></td>
+                                   <td class="month1-sgn"><a href="#"></a></td>                                   
+                                   <td class="month2-sgn"><a href="#"></a></td>                                   
+                                   <td class="month3-sgn"><a href="#"></td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td>Duong Dong</td>
+                                   <td>(PQC)</td>
+                                   <td></td>
+                                   <td class="month1-pqc"><a href="#"></a></td>                                   
+                                   <td class="month2-pqc"><a href="#"></a></td>                                   
+                                   <td class="month3-pqc"><a href="#"></a></td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td>Nha Trang</td>
+                                   <td>(NHA)</td>
+                                   <td></td>
+                                   <td class="month1-nha"><a href="#"></a></td>                                   
+                                   <td class="month2-nha"><a href="#"></a></td>                                   
+                                   <td class="month3-nha "><a href="#"></a></td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td>Da Nang</td>
+                                   <td>(DAD)</td>
+                                   <td></td>
+                                   <td class="month1-dad"><a href="#"></a></td>                                   
+                                   <td class="month2-dad"><a href="#"></a></td>                                   
+                                   <td class="month3-dad"><a href="#"></a></td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td></td>
+                                   <td></td>
+                               </tr>
+                                            
+                       </table>
+                   </div>
+               </div>
+           </div>
+           
+       </div>
+   </div>
+   
+   
+    <!-- section -->
+    <section class="">
+        <div id="newsSocial">
+            <div class="container">
+                <div class="section0 borderTop">
+                   <div class="row">
+                       <div class="col-sm-9">
+                           <div class="sectionHdr">
+                                <h3>Sign up for our newsletter <small class="txt-16">Get our best deals and promotions on your inbox </small></h3>
+                            </div>
+                            <div class="sectionInfo">
+                               <div class="row">
+                                <div class="col-sm-7">
+                                    <input class="formInput formInput100 bannerInput" placeholder="Youe Email Address">
+                                </div>
+                        
+                                <div class="col-sm-3">
+                                   <div class="sButton">
+                                    <button class="formButton">Continue</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                       <div class="col-sm-3">
+                           <div class="sectionHdr">
+                                <h3>Find us on Social media</h3>
+                            </div>
+                            <div class="sectionInfo">
+                                <ul class="findSocials">
+                                    <li><a href=""><img src="assets/img/socials/1.png" alt=""></a></li>
+                                     <li><a href=""><img src="assets/img/socials/2.png" alt=""></a></li>
+                                      <li><a href=""><img src="assets/img/socials/3.png" alt=""></a></li>
+                                       <li><a href=""><img src="assets/img/socials/4.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                       </div>
+                       
+                   </div>
+                    
+               </div>
+            </div>
+        </div>
+                  
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footerInner">
+                <div class="footer1">
+                    <div class="footer1Hdr">
+                        <div class="row">
+                        <div class="col-sm-5 visible-xs">
+                            <div class="lControl">
+                               <div class="row">
+                                   <div class="col-sm-6">
+                                        <p class="txt-16">Choose Your Language</p>
+                                   </div>
+                                   <div class="col-sm-6 ">
+                                        <select class="formInput formInput100 ">
+                                            <option value="">English (UK)</option>
+                                        </select>
+                                   </div>
+                               </div>
+                               
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-7">
+                             <h3>Helpful Information</h3>  
+                        </div>
+                        <div class="col-sm-5 hidden-xs">
+                            <div class="lControl">
+                               <div class="row">
+                                   <div class="col-sm-6">
+                                        <p class="txt-16">Choose Your Language</p>
+                                   </div>
+                                   <div class="col-sm-6 ">
+                                        <select class="formInput formInput100 ">
+                                            <option value="">English (UK)</option>
+                                        </select>
+                                   </div>
+                               </div>
+                               
+                            </div>
+                        </div>
+                         
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    <div class="footer1Info">
+                      <div class="row">
+                          <div class="col-sm-3">
+                               <h4>Fly with us</h4>
+                                <ul>
+                                    <li><a href="">Where we fly</a></li>
+                                    <li><a href="">Low fare calendar</a></li>
+                                    <li><a href="">Sign up for deals</a></li>
+                                    <li><a href="">Tour packages</a></li>
+                                </ul>
+                          </div>
+                          <div class="col-sm-3">
+                               <h4>Customer Service</h4>
+                                <ul>
+                                    <li><a href="">Help and contact</a></li>
+                                    <li><a href="">Special assistance</a></li>
+                                    <li><a href="">Baggage charges</a></li>
+                                    <li><a href="">Optional service charges</a></li>
+                                </ul>
+                          </div>
+                          
+                          <div class="col-sm-3">
+                               <h4>Corporate Info</h4>
+                                <ul>
+                                    <li><a href="">About JC International</a></li>
+                                    <li><a href="">Careers</a></li>
+                                    <li><a href="">Media / Press release</a></li>
+                                    <li><a href="">Investor relations</a></li>
+                                </ul>
+                          </div>
+                          
+                          <div class="col-sm-3">
+                               <h4>Manage Trips</h4>
+                                <ul>
+                                    <li><a href="">My Account</a></li>
+                                    <li><a href="">Flight Status</a></li>
+                                    <li><a href="">Online Checking</a></li>
+                                    <li><a href="">Flight Schedule</a></li>
+                                </ul>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="footer2">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="footerLogo">
+                                <img src="assets/img/footerLogo.png" alt="">
+                                <span>&copy; 2016</span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div class="footerMenu">
+                                <ul>
+                                    <li><a href="">Terms of use</a></li>
+                                    <li><a href="">Privacy policy</a></li>
+                                    <li><a href="">Cookies</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        
+                         <div class="col-sm-2">
+                            <div class="footerMenu">
+                                <ul>
+                                    
+                                    <li><a href="#header">Back to top <img class="topArrow" src="assets/img/iconUpward.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- / FOOTER -->
+    
+    </div>
+    <!-- / WRAPPER -->
+    
+    
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="  crossorigin="anonymous"></script> <!---->
+    
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/owl.carousel/owl.carousel.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"> </script>
+    <script src="assets/date.picker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/months.js"></script>
+    <script>
+      $(function () {
+          
+          alert(monthsData.data[0].month);
+          
+                $('#datetimepicker4').datetimepicker();
+                $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:false,
+            dots:true
+        },
+        800:{
+            items:2,
+            nav:false,
+            dots:true
+        },
+         1000:{
+            items:3,
+            nav:false,
+            dots:true
+        },
+        1200:{
+            items:4,
+            nav:false,
+            loop:false,
+            dots:true
+        }
+    }
+})
+            });    
+        
+    
+        
+    </script>
+    
+    
+    
+    <!--=====Map======-->
+    
+    
+    <script>
+        
+         $('a[href*="#"]:not([href="#"])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+        
+        var priceData = [
+                            {"Sno":"1","month":"Jan","REP":"$49","KOS":"$59","SGN":"$119","PQC":"$129","NHA":"$153","DAD":"$199"},
+                            {"Sno":"2","month":"Feb","REP":"$35 *","KOS":"$21 *","SGN":"$151.30","PQC":"$169","NHA":"$151","DAD":"$151 *"},
+                            {"Sno":"3","month":"March","REP":"$69.50","KOS":"$49.10","SGN":"$149","PQC":"$134.50","NHA":"$149 *","DAD":"$189.39"},
+                            {"Sno":"4","month":"Apr","REP":"$49","KOS":"$59","SGN":"$119","PQC":"$129","NHA":"$153","DAD":"$199"},
+                            {"Sno":"5","month":"May","REP":"$35 *","KOS":"$21 *","SGN":"$151.30","PQC":"$169","NHA":"$151","DAD":"$151 *"},
+                            {"Sno":"6","month":"June","REP":"$69.50","KOS":"$49.10","SGN":"$149","PQC":"$134.50","NHA":"$149 *","DAD":"$189.39"},
+                            {"Sno":"7","month":"July","REP":"$49","KOS":"$59","SGN":"$119","PQC":"$129","NHA":"$153","DAD":"$199"},
+                            {"Sno":"8","month":"Aug","REP":"$35 *","KOS":"$21 *","SGN":"$151.30","PQC":"$169","NHA":"$151","DAD":"$151 *"},
+                            {"Sno":"9","month":"Sept","REP":"$69.50","KOS":"$49.10","SGN":"$149","PQC":"$134.50","NHA":"$149 *","DAD":"$189.39"},
+                            {"Sno":"10","month":"Oct","REP":"$49","KOS":"$59","SGN":"$119","PQC":"$129","NHA":"$153","DAD":"$199"},
+                            {"Sno":"11","month":"Nov","REP":"$35 *","KOS":"$21 *","SGN":"$151.30","PQC":"$169","NHA":"$151","DAD":"$151 *"},
+                            {"Sno":"12","month":"Dec","REP":"$69.50","KOS":"$49.10","SGN":"$149","PQC":"$134.50","NHA":"$149 *","DAD":"$189.39"}
+                        ];
+        
+        var count=1;
+        
+        //$(function(){
+        if(count==1){
+            for(var i=1;i<4;i++){                
+                var j=i-1;
+                $(".FlightDetail .month"+i+"").text(priceData[j].month);
+                $(".FlightDetail .month"+i+"-rep").html("<a href='#' class='blueColor'>"+ priceData[j].REP+"</a>");
+                $(".FlightDetail .month"+i+"-kos").html("<a href='#' class='blueColor'>"+priceData[j].KOS+"</a>");
+                $(".FlightDetail .month"+i+"-sgn").html("<a href='#' class='blueColor'>"+priceData[j].SGN+"</a>");                
+                $(".FlightDetail .month"+i+"-pqc").html("<a href='#' class='blueColor'>"+priceData[j].PQC+"</a>");
+                $(".FlightDetail .month"+i+"-nha").html("<a href='#' class='blueColor'>"+priceData[j].NHA+"</a>");
+                $(".FlightDetail .month"+i+"-dad").html("<a href='#' class='blueColor'>"+priceData[j].DAD+"</a>");
+                
+                $(".FlightDetail a:contains('*')").each(function(){ $(this).removeClass("blueColor"); });
+                
+                $(".FlightDetail a:contains('.')").each(function(){ 
+                    var res=$(this).text().split('.');
+                    $(this).html(res[0]+".<small>"+res[1]+"</small>");                    
+                });
+                
+            }
+            }
+        //});
+        
+        
+        
+        $(".arrowIcongs .prev3").click(function(){            
+            if(count > 1){
+                count-=1;
+            for(var i=count;i<count+3;i++){                
+                var j=i-1;
+                var sn=i-count+1;
+                $(".FlightDetail .month"+sn+"").text(priceData[j].month);
+                $(".FlightDetail .month"+sn+"-rep").html("<a href='#' class='blueColor'>"+ priceData[j].REP+"</a>");
+                $(".FlightDetail .month"+sn+"-kos").html("<a href='#' class='blueColor'>"+priceData[j].KOS+"</a>");
+                $(".FlightDetail .month"+sn+"-sgn").html("<a href='#' class='blueColor'>"+priceData[j].SGN+"</a>");                
+                $(".FlightDetail .month"+sn+"-pqc").html("<a href='#' class='blueColor'>"+priceData[j].PQC+"</a>");
+                $(".FlightDetail .month"+sn+"-nha").html("<a href='#' class='blueColor'>"+priceData[j].NHA+"</a>");
+                $(".FlightDetail .month"+sn+"-dad").html("<a href='#' class='blueColor'>"+priceData[j].DAD+"</a>");
+                
+                $(".FlightDetail a:contains('*')").each(function(){ $(this).removeClass("blueColor"); });
+                
+                 $(".FlightDetail a:contains('.')").each(function(){ 
+                    var res=$(this).text().split('.');
+                    $(this).html(res[0]+".<small>"+res[1]+"</small>");                    
+                });
+            }
+                }
+        });
+        
+        $(".arrowIcongs .next3").click(function(){            
+            if(count < 10){
+                count+=1;
+            for(var i=count;i<count+3;i++){                
+                var j=i-1;
+                var sn=i-count+1;
+                $(".FlightDetail .month"+sn+"").text(priceData[j].month);
+                $(".FlightDetail .month"+sn+"-rep").html("<a href='#' class='blueColor'>"+ priceData[j].REP+"</a>");
+                $(".FlightDetail .month"+sn+"-kos").html("<a href='#' class='blueColor'>"+priceData[j].KOS+"</a>");
+                $(".FlightDetail .month"+sn+"-sgn").html("<a href='#' class='blueColor'>"+priceData[j].SGN+"</a>");                
+                $(".FlightDetail .month"+sn+"-pqc").html("<a href='#' class='blueColor'>"+priceData[j].PQC+"</a>");
+                $(".FlightDetail .month"+sn+"-nha").html("<a href='#' class='blueColor'>"+priceData[j].NHA+"</a>");
+                $(".FlightDetail .month"+sn+"-dad").html("<a href='#' class='blueColor'>"+priceData[j].DAD+"</a>");
+                
+                $(".FlightDetail a:contains('*')").each(function(){ $(this).removeClass("blueColor"); });
+                 $(".FlightDetail a:contains('.')").each(function(){ 
+                    var res=$(this).text().split('.');
+                    $(this).html(res[0]+".<small>"+res[1]+"</small>");                    
+                });
+            }
+                }
+        });
+
+        
+      // This example requires the Geometry library. Include the libraries=geometry
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=geometry">
+
+        var locationData= [{"location":"Airport international Charles de Gaulle","placeId":"ChIJW89MjgM-5kcRLKZbL5jgKwQ","lat":49.009762,"lng": 2.561263,"FullAddress":"<h2>Charles de Gaulle</h2><img src='assets/img/location-img/hong-kong.png' class='img-resposive' /><p>Relax and get ready to land in one of Asia’s most intriguing destinations, a place where East and West blend harmoniously – welcome to Hong Kong. <a href='#'>More Info</a> </p><br/><h3>Daily Flights Starting from</h3><br /> <h1>USD <strong>199</strong> <a href='#'>Book Now</a></h1>"},
+                           
+                                {"location":"Auckland Airport","placeId":"ChIJH7b8n-hPDW0R0LOiQ2HvAAU","lat":'-37.008284',"lng": 174.785031,"FullAddress":"<h2>Auckland Airport</h2><img src='assets/img/location-img/hong-kong.png' class='img-resposive' /><p>Relax and get ready to land in one of Asia’s most intriguing destinations, a place where East and West blend harmoniously – welcome to Hong Kong. <a href='#'>More Info</a> </p><br/><h3>Daily Flights Starting from</h3><br /> <h1>USD <strong>199</strong> <a href='#'>Book Now</a></h1>"},
+                           
+                                {"location":"Bahrain International Airport","placeId":"ChIJk3ndPzSmST4Rlhp6z7trwvQ","lat":26.269712,"lng": 50.625985,"FullAddress":"<h2>Bahrain</h2><img src='assets/img/location-img/hong-kong.png' class='img-resposive' /><p>Relax and get ready to land in one of Asia’s most intriguing destinations, a place where East and West blend harmoniously – welcome to Hong Kong. <a href='#'>More Info</a> </p><br/><h3>Daily Flights Starting from</h3><br /> <h1>USD <strong>199</strong> <a href='#'>Book Now</a></h1>"},
+                           
+                                {"location":"Colombo International Airport","placeId":"ChIJXS3yNbfv4joRN4uCAyFwvW4","lat":7.180176,"lng": 79.884266,"FullAddress":"<h2>Colombo</h2><img src='assets/img/location-img/hong-kong.png' class='img-resposive' /><p>Relax and get ready to land in one of Asia’s most intriguing destinations, a place where East and West blend harmoniously – welcome to Hong Kong. <a href='#'>More Info</a> </p><br/><h3>Daily Flights Starting from</h3><br /> <h1>USD <strong>199</strong> <a href='#'>Book Now</a></h1>"},
+                           
+                                {"location":"Dubai International Airport","placeId":"ChIJaQ4mkwZdXz4R6e5IegDUleY","lat":25.253173,"lng": 55.365675,"FullAddress":"<h2>Dubai</h2><img src='assets/img/location-img/hong-kong.png' class='img-resposive' /><p>Relax and get ready to land in one of Asia’s most intriguing destinations, a place where East and West blend harmoniously – welcome to Hong Kong. <a href='#'>More Info</a> </p><br/><h3>Daily Flights Starting from</h3><br /> <h1>USD <strong>199</strong> <a href='#'>Book Now</a></h1>"}
+                            ];
+        
+        
+        
+      var marker1, marker2=new Array(10);
+      var poly, geodesicPoly=new Array(10);
+    var styles=[
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#bdbdbd"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#eeeeee"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e5e5e5"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dadada"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e5e5e5"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#eeeeee"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#c9c9c9"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  }
+]; 
+    var map ;
+    
+        function initMap() {
+          
+       map  = new google.maps.Map(document.getElementById('map'), {
+          zoom: 2,
+          scrollwheel: false,
+         center:new google.maps.LatLng(51.508742,-0.120850),
+            styles: styles,
+           
+            
+          zoomControl: true,
+          zoomControlOptions: {
+              position: google.maps.ControlPosition.LEFT_BOTTOM
+          },
+          fullscreenControl: true
+        });
+        
+         //===Orgin of the map
+            marker1 = new google.maps.Marker({
+              map: map, 
+              draggable: false,
+              position: {lat: 11.592390, lng: 104.878624},
+                icon:{url:"assets/img/map-origin-icon.png",anchor: new google.maps.Point(14, 14)}
+            });
+          
+          //===Other Location of map
+          
+          for(var i=0;i<locationData.length;i++){               
+                marker2[i] = new google.maps.Marker({
+                    map: map,
+                    draggable: false,
+                    position: {lat: locationData[i].lat, lng: locationData[i].lng},
+                    icon:" "
+                }); 
+               
+              
+              if( locationData[i].placeId!=""){
+                  
+                var infowindow = new google.maps.InfoWindow();
+                var service = new google.maps.places.PlacesService(map);
+
+                service.getDetails({
+                  placeId: locationData[i].placeId                    
+                }, function(place, status) {                    
+                  if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: place.geometry.location,
+                        icon:{url:"assets/img/list-red-icon.png",anchor: new google.maps.Point(8, 7)}
+                    });
+                      
+                      
+                    google.maps.event.addListener(marker, 'click', function() {
+                        var placeId=place.place_id;
+                         for(var i=0;i<locationData.length;i++){    
+                             if(locationData[i].placeId==placeId){                                 
+                        infowindow.setContent("<div class='locationDiv'>"+locationData[i].FullAddress+"</div>");
+                         }
+                         }
+                      infowindow.open(map, this);                     
+                    });
+                  }
+                });
+              }
+                }
+          
+                              
+                   
+          var location;var bounds1;
+          for(var i=0;i<locationData.length;i++){              
+         bounds1= new google.maps.LatLngBounds(marker1.getPosition(), marker2[i].getPosition());
+          }
+          
+        var bounds= new google.maps.LatLngBounds(marker1.getPosition());
+        
+        map.fitBounds(bounds);
+        
+        for(var i=0;i<locationData.length;i++){               
+              google.maps.event.addListener(marker2[i]);                      
+          }
+          
+        google.maps.event.addListener(marker1, 'position_changed', update);  
+
+        poly = new google.maps.Polyline({
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 3,
+          map: map,
+        });
+
+          for(var i=0;i<locationData.length;i++){
+            geodesicPoly[i] = new google.maps.Polyline({
+              strokeColor: '#9092c2',                
+              strokeOpacity: 1.0,
+              strokeWeight: 3,
+              geodesic: true,
+              map: map
+            });
+          }
+
+           var lineSymbol = {
+                path: 'M362.985,430.724l-10.248,51.234l62.332,57.969l-3.293,26.145 l-71.345-23.599l-2.001,13.069l-2.057-13.529l-71.278,22.928l-5.762-23.984l64.097-59.271l-8.913-51.359l0.858-114.43 l-21.945-11.338l-189.358,88.76l-1.18-32.262l213.344-180.08l0.875-107.436l7.973-32.005l7.642-12.054l7.377-3.958l9.238,3.65 l6.367,14.925l7.369,30.363v106.375l211.592,182.082l-1.496,32.247l-188.479-90.61l-21.616,10.087l-0.094,115.684',
+               scale: 0.06, 
+    strokeOpacity: 1,
+    fillColor: '#f00',          
+    strokeWeight: 3,
+    anchor: new google.maps.Point(340,400),               
+                strokeColor: '#393'
+              };
+          
+          // Create the polyline and add the symbol to it via the 'icons' property.
+  var line = new google.maps.Polyline({
+    path: [{lat: 11.592390, lng: 104.878624}, {lat: -37.008284, lng: 174.785031}],
+      geodesic: true,
+      strokeColor: '#9092c2',
+    icons: [{
+      icon: lineSymbol,
+      offset: '100%'
+    }],
+    map: map
+  });
+
+        animateCircle(line);  
+        update();
+      }
+
+      function update() {          
+        var path=Array(5);
+           for(var i=0;i<locationData.length;i++){               
+               path[i]=[marker1.getPosition(), marker2[i].getPosition()];
+               
+               geodesicPoly[i].setPath(path[i]);               
+           }
+      }
+        
+        
+        
+         
+// Use the DOM setInterval() function to change the offset of the symbol
+// at fixed intervals.
+function animateCircle(line) {
+    var count = 0;
+    window.setInterval(function() {
+      count = (count + 0.1) % 200;
+
+      var icons = line.get('icons');
+      icons[0].offset = (count / 2) + '%';
+      line.set('icons', icons);
+  }, 20);
+}
+        
+    
+    setTimeout(function(){
+         map.setZoom(4)
+    },500)
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMtEH2rnetuGfmzSVLHmwkyTiipddoQec&#038;libraries=places&callback=initMap" ></script>
+    
+    
+    
+<body>
+    
+</body>
+</html>

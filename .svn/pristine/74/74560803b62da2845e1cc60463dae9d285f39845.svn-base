@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/owl.carousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/controls.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/date.picker/css/bootstrap-datetimepicker-standalone.css">
+    <link rel="stylesheet" href="assets/date.picker/css/bootstrap-datetimepicker.min.css">
+</head>
+
+<div class="wrapper">
+     <header id="header">
+        <div class="mainHeader myAcc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul class="pull-right">
+                            <li><a href="#" class="registration">Register</a></li>
+                            <li><a href="#" class="login"><i class="glyphicon glyphicon-user"></i> Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+           </div>
+        </div>
+        <div class="mainHeader">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile bgcdisplay -->
+                <div class="navbar-header">                    
+                     <a class="navbar-brand" href="index.html"><img src="assets/img/logo1.png" alt=""></a>
+                    
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> 
+                        <span class="sr-only">Toggle navigation</span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                    </button>
+                    
+                    <ul id="mobileNav" class="nav navbar-nav navbar-right visible-xs">
+                        <li><a href="flight-shedule.html"><img src="assets/img/iconSearch.png" alt=""></a></li>
+                          <li><select name="" id="" class="formInput formInput100">
+                            <option value="">EN</option>
+                        </select></li>
+                    </ul>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="" href="">Bookings</a></li>
+                        <li><a href="manage-booking.html">Manage Booking</a></li>
+                        <li><a href="">JC Rewards</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li class="hidden-xs"><a href="flight-shedule.html"><img src="assets/img/iconSearch.png" alt=""></a></li>
+                        <li  class="hidden-xs"><select name="" id="" class="formInput formInput100">
+                                                <option value="">EN</option>
+                                                </select>
+                        </li>
+                    </ul>
+                    
+                    <div class="clearfix"></div>
+                </div>
+                 <div class="clearfix"></div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+    </header>
+    <!-- / HEADER -->
+
+    <!-- section -->
+    
+    <div id="aboutPage">
+        <div class="container">
+           <div class="row">
+               <div class="col-sm-8">
+               <section class="section0">
+                <div id="aboutLt">
+                  
+                        <div class="sectionHdr">                           
+                            <h1 class="txt-2e3">Flight Shedule</h1>
+                            <hr>
+                        </div>
+                      
+                        
+                        <div class="sectionInfo">
+                            <div class="row nomargin">
+                                <div class="col-sm-12 col-lg-8 nopadding flightSheduleForm">                                    
+                                    <p><label><strong>From <span class="requiredF">*</span> </strong></label> <span><input type="text" class="formInput" /></span></p>                                    
+                                    <p><label><strong>To <span class="requiredF">*</span></strong></label> <span><input type="text" class="formInput" /></span></p>                                    
+                                    <p><label><strong>Month <span class="requiredF">*</span></strong></label> <span><input id='datetimepicker4' type="text" class="formInput formInput100 bannerInput formInputDate" placeholder=""></span></p>
+                                    <p><label><strong>Round Trip</strong></label> <span><input type="checkbox" id="roundTrip" /> <label for="roundTrip"></label></span></p>
+                                    
+                                    <p><label>&nbsp;</label> <span>
+                                                                   <span class="bannerCols16 bannerCols manageBooking">
+                                                                    <button class="formButton">Search</button>
+                                                                </span>
+                                                                </span>
+                                    </p>
+                                </div>                                
+                            </div>
+                           
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>              
+                </section>
+               </div>
+               
+               <div class="col-sm-4">
+                  <div class="sideBar">                     
+                     
+                     <div class="widget nopadding">
+                         <h2 class="text-center imgCentergs"><img src="assets/img/calender-icon.png" class='img-responsive' /></h2>
+                      </div>
+                     
+                      <div class="widget lightGray">
+                         <h3 class="wifiIcon"><span>Our in-flight WiFi</span></h3>
+                          <p>Being in the air shouldn’t mean being out of touch. Or bored. Or behind. Fly with us and go online in the air. Free WiFi is available on most of our flights </p>
+                          <h6><a href="#" class="readMore">How to use our in-flight WiFi</a></h6>
+                      </div>
+                      <div class="widget lightGray">
+                          <h3 class="entertainment"><span>In-flight entertainment</span></h3>
+                          <p>Fly with us, and you’ll have entertainment at your fingertips at any time, either with Video On Demand or live TV.</p>
+                          <h6><a href="#" class="readMore">Find out more</a></h6>
+                      </div>
+                      <div class="widget lightGray">
+                          <img src="assets/img/banner-space-dummy.png" class="img-responsive" />
+                      </div>
+                  </div>                   
+               </div>
+               
+           </div>
+
+        </div>
+    </div>
+
+
+    <!-- section -->
+    <section class="">
+        <div id="newsSocial">
+            <div class="container">
+                <div class="section0 borderTop">
+                   <div class="row">
+                       <div class="col-sm-9">
+                           <div class="sectionHdr">
+                                <h3>Sign up for our newsletter <small class="txt-16">Get our best deals and promotions on your inbox </small></h3>
+                            </div>
+                            <div class="sectionInfo">
+                               <div class="row">
+                                <div class="col-sm-7">
+                                    <input class="formInput formInput100 bannerInput" placeholder="Youe Email Address">
+                                </div>
+                        
+                                <div class="col-sm-3">
+                                   <div class="sButton">
+                                    <button class="formButton">Continue</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                       <div class="col-sm-3">
+                           <div class="sectionHdr">
+                                <h3>Find us on Social media</h3>
+                            </div>
+                            <div class="sectionInfo">
+                                <ul class="findSocials">
+                                    <li><a href=""><img src="assets/img/socials/1.png" alt=""></a></li>
+                                     <li><a href=""><img src="assets/img/socials/2.png" alt=""></a></li>
+                                      <li><a href=""><img src="assets/img/socials/3.png" alt=""></a></li>
+                                       <li><a href=""><img src="assets/img/socials/4.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                       </div>
+                       
+                   </div>
+                    
+               </div>
+            </div>
+        </div>
+                  
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footerInner">
+                <div class="footer1">
+                    <div class="footer1Hdr">
+                        <div class="row">
+                        <div class="col-sm-5 visible-xs">
+                            <div class="lControl">
+                               <div class="row">
+                                   <div class="col-sm-6">
+                                        <p class="txt-16">Choose Your Language</p>
+                                   </div>
+                                   <div class="col-sm-6 ">
+                                        <select class="formInput formInput100 ">
+                                            <option value="">English (UK)</option>
+                                        </select>
+                                   </div>
+                               </div>
+                               
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-7">
+                             <h3>Helpful Information</h3>  
+                        </div>
+                        <div class="col-sm-5 hidden-xs">
+                            <div class="lControl">
+                               <div class="row">
+                                   <div class="col-sm-6">
+                                        <p class="txt-16">Choose Your Language</p>
+                                   </div>
+                                   <div class="col-sm-6 ">
+                                        <select class="formInput formInput100 ">
+                                            <option value="">English (UK)</option>
+                                        </select>
+                                   </div>
+                               </div>
+                               
+                            </div>
+                        </div>
+                         
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    <div class="footer1Info">
+                      <div class="row">
+                          <div class="col-sm-3">
+                               <h4>Fly with us</h4>
+                                <ul>
+                                    <li><a href="">Where we fly</a></li>
+                                    <li><a href="">Low fare calendar</a></li>
+                                    <li><a href="">Sign up for deals</a></li>
+                                    <li><a href="">Tour packages</a></li>
+                                </ul>
+                          </div>
+                          <div class="col-sm-3">
+                               <h4>Customer Service</h4>
+                                <ul>
+                                    <li><a href="">Help and contact</a></li>
+                                    <li><a href="">Special assistance</a></li>
+                                    <li><a href="">Baggage charges</a></li>
+                                    <li><a href="">Optional service charges</a></li>
+                                </ul>
+                          </div>
+                          
+                          <div class="col-sm-3">
+                               <h4>Corporate Info</h4>
+                                <ul>
+                                    <li><a href="">About JC International</a></li>
+                                    <li><a href="">Careers</a></li>
+                                    <li><a href="">Media / Press release</a></li>
+                                    <li><a href="">Investor relations</a></li>
+                                </ul>
+                          </div>
+                          
+                          <div class="col-sm-3">
+                               <h4>Manage Trips</h4>
+                                <ul>
+                                    <li><a href="">My Account</a></li>
+                                    <li><a href="">Flight Status</a></li>
+                                    <li><a href="">Online Checking</a></li>
+                                    <li><a href="">Flight Schedule</a></li>
+                                </ul>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="footer2">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="footerLogo">
+                                <img src="assets/img/footerLogo.png" alt="">
+                                <span>&copy; 2016</span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div class="footerMenu">
+                                <ul>
+                                    <li><a href="">Terms of use</a></li>
+                                    <li><a href="">Privacy policy</a></li>
+                                    <li><a href="">Cookies</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        
+                         <div class="col-sm-2">
+                            <div class="footerMenu">
+                                <ul>
+                                    
+                                    <li><a href="#header">Back to top <img class="topArrow" src="assets/img/iconUpward.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- / FOOTER -->
+    
+    </div>
+    <!-- / WRAPPER -->
+    
+    
+    <!-- script -->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/owl.carousel/owl.carousel.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"> </script>
+    <script src="assets/date.picker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    
+    <script>
+        
+         $('a[href*="#"]:not([href="#"])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+        
+      $(function () {
+                $('#datetimepicker4').datetimepicker();
+                $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:false,
+            dots:true
+        },
+        800:{
+            items:2,
+            nav:false,
+            dots:true
+        },
+         1000:{
+            items:3,
+            nav:false,
+            dots:true
+        },
+        1200:{
+            items:4,
+            nav:false,
+            loop:false,
+            dots:true
+        }
+    }
+})
+            });    
+        
+    
+    </script>
+<body>
+    
+</body>
+</html>

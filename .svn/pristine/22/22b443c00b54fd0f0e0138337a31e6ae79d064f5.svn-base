@@ -1,0 +1,148 @@
+@import url("../webfonts/Avenir_Book/stylesheet.css");
+@import url("../webfonts/Avenir_Light/stylesheet.css");
+@import url("../webfonts/Avenir_Oblique/stylesheet.css");
+@import url("../webfonts/Avenir_Roman/stylesheet.css");
+@import url("../webfonts/Avenir_Black/stylesheet.css");
+@import url("../webfonts/Avenir_BlackOblique/stylesheet.css");
+@import url("../webfonts/Avenir_Heavy/stylesheet.css");
+@import url("../webfonts/Avenir_HeavyOblique/stylesheet.css");
+@import url("../webfonts/Avenir_Medium/stylesheet.css");
+@import url("../webfonts/Avenir_MediumOblique/stylesheet.css");
+
+body{font-family: 'Avenir Book'!important;}
+
+.borderTop{border-top: 1px solid #ccc;}
+
+.section0{padding: 40px 0;}
+.section01{padding: 0 0 40px 0;}
+.sectionHdr hr{background-color: #e6e9f4;height: 2px;margin: 0 0 20px 0;}
+
+@media(max-width:767px){
+    .sectionHdr h3,
+    .sectionHdr h2
+    {text-align: center;}
+}
+
+.mb30{margin-bottom: 30px;}
+
+.txt-16{font-size: 16px;}
+.txt-18{font-size: 18px;}
+.txt-20{font-size: 20px;}
+.txt-22{font-size: 22px;}
+.txt-24{font-size: 24px;}
+.txt-30{font-size: 30px;}
+
+.txt-fff{color: #fff;}
+.txt-2f2{color: #2f2f2f;}
+.txt-2e3{color: #2e3192;}
+
+.txt-avRegular{font-family: 'Avenir Book'; }
+
+.txt-avMedium{font-family: 'Avenir Medium'; }
+.txt-avBlack{font-family: 'Avenir Black';}
+
+h1{font-size: 36px;font-family: 'Avenir Medium';margin-bottom: 30px;}
+h2{font-size: 30px;font-family: 'Avenir Medium';}
+h3{font-family: 'Avenir Medium';color: #2e3192;font-size: 24px;margin: 0;padding: 0;}
+h3>span{font-family: 'Avenir Medium';color: #ed1c24;font-size: 24px;}
+
+h4{font-family: 'Avenir Medium';color: #2e3192;font-size: 22px;}
+h5{font-family: 'Avenir Medium';color: #2e3192;font-size: 18px;}
+h6{font-family: 'Avenir Medium';color: #2f2f2f;font-size: 16px;}
+p{}
+/* <<Forms>> */
+.formInput100{width: 100%;min-width: 100%;max-width: 100%;}
+.formInput{min-height: 40px;max-height: 40px;border-radius: 0;background-color: #fff;
+line-height:normal;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none;width:200px;display:block;width:100%;border:1px solid #c8c8c8;color:#9f9f9f;padding:8px 20px 7px 10px;margin:0;line-height:normal;
+font-family: 'Avenir Book'; font-size: 16px;color: #9aa1a7;
+}
+
+.formInputDate{background-image: url(../img/iconCalendar.png);background-position: top 10px right 15px;background-repeat: no-repeat;}
+
+.formButton{background-color: #ed1c24;border-radius: 6px;min-height: 40px;max-height: 40px;line-height: 40px;text-align: center;border: none;min-width: 160px;font-family: 'Avenir Black';color: #fff;font-size: 16px;}
+.formButton2{background-color: #2e3192;border-radius: 6px;min-height: 40px;max-height: 40px;line-height: 40px;text-align: center;border: none;min-width: 160px;font-family: 'Avenir Black';color: #fff;font-size: 16px;}
+
+
+select.formInput{background-image: url(../img/iconDownArrow0.png);background-position: top 17px right 15px;background-repeat: no-repeat;}
+
+/* Checkbox customized*/
+.c-chkbox label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 25px;
+	font-size: 16px;
+	font-weight: 200;
+	margin-bottom:0;
+}
+
+.c-chkbox .chkbox{position: relative;}
+.c-chkbox input["type=checkbox"] {
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+opacity: 0;
+z-index:9;
+cursor:pointer;
+}
+
+
+.c-chkbox input[type="radio"] {
+	display: none;
+}
+.c-chkbox input[type="checkbox"] + label:before {
+	content: "";
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	margin-right: 10px;
+	position: absolute;
+	left: 0;
+	top: 1px;
+	/* background-color: #ECECEC; */
+	border: 1px solid #C8C8C8;
+	border-radius: 4px;
+	transition:background-color 0.2s ease-in-out 0.02s;
+}
+
+.c-chkbox input[type="radio"] + label:before {
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 10px;
+	position: absolute;
+	left: 0;
+	top: 3px;
+	border: 1px solid #C8C8C8;
+	border-radius: 50%;
+	transition:background-color 0.2s ease-in-out 0.02s;
+}
+
+.c-chkbox input[type="checkbox"]:checked + label:before {
+	content: "";
+   background-image: url(../img/check-mark.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	border:none;	
+	background-color: #438800;
+	font-size: 15px;
+	color: #333;
+	text-align: center;
+    line-height: 15px;
+}
+
+
+.c-chkbox input[type="radio"]:checked + label:before {
+	content: "";
+	background-image: url(../img/iconChecked.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	font-size: 15px;
+	color: #333;
+	text-align: center;
+	line-height: 15px;
+	border: 1px solid #2e3192;
+}

@@ -1,0 +1,183 @@
+<?php
+/**
+ * The template for displaying the footer
+ *
+ * Contains the closing of the "site-content" div and all content after.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Fifteen
+ * @since Twenty Fifteen 1.0
+ */
+?>
+       <!-- section -->
+    <section class="">
+        <div id="newsSocial">
+            <div class="container">
+                <div class="section0 borderTop">
+                   <div class="row">
+                       <div class="col-sm-9">
+                           <div class="sectionHdr">
+                          
+                                <h3><?php the_field('subscription_form_title','options') ?><small class="txt-16"><?php the_field('subscription_form_sub_title','options') ?></small></h3>
+                            </div>
+                             <?php es_subbox( $namefield = "YES", $desc = "", $group = "Public" ); ?>
+                        </div>
+                       
+                       <div class="col-sm-3">
+                           <div class="sectionHdr">
+                                <h3>Find us on Social media</h3>
+                            </div>
+                            <div class="sectionInfo">
+                                <ul class="findSocials">
+                                    <?php if(have_rows('social','options')): while(have_rows('social','options')): the_row(); ?>
+                                    <?php if(get_sub_field('link')): ?><li><a href="<?php the_sub_field('link'); ?>"><img src="<?php the_sub_field('icon'); ?>" alt=""></a></li><?php endif; ?>
+
+                                    <?php endwhile; endif; ?>    
+                                </ul>
+                            </div>
+                       </div>
+                       
+                   </div>
+                    
+               </div>
+            </div>
+        </div>
+                  
+    </section>
+
+	<footer>
+        <div class="container">
+            <div class="footerInner">
+                <div class="footer1">
+                    <div class="footer1Hdr">
+                        <div class="row">
+	                        <div class="col-sm-5 visible-xs">
+	                            <div class="lControl">
+	                               <div class="row">
+	                                   <div class="col-sm-6">
+	                                        <p class="txt-16">Choose Your Language</p>
+	                                   </div>
+	                                   <div class="col-sm-6 ">
+	                                        <select class="formInput formInput100 ">
+	                                            <option value="">English (UK)</option>
+	                                        </select>
+	                                   </div>
+	                               </div>
+	                               
+	                            </div>
+	                        </div>
+	                        
+	                        <div class="col-sm-7">
+	                             <h3>Helpful Information</h3>  
+	                        </div>
+	                        <div class="col-sm-5 hidden-xs">
+	                            <div class="lControl">
+	                               <div class="row">
+	                                   <div class="col-sm-6">
+	                                        <p class="txt-16">Choose Your Language</p>
+	                                   </div>
+	                                   <div class="col-sm-6 ">
+	                                        <select class="formInput formInput100 ">
+	                                            <option value="">English (UK)</option>
+	                                        </select>
+	                                   </div>
+	                               </div>
+	                               
+	                            </div>
+	                        </div>
+                         
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    <div class="footer1Info">
+                      <div class="row">
+
+                      	  <?php dynamic_sidebar('footer_1'); ?>
+                      	  <?php dynamic_sidebar('footer_2'); ?>
+                      	  <?php dynamic_sidebar('footer_3'); ?>
+                      	  <?php dynamic_sidebar('footer_4'); ?>
+                          
+                      </div>
+                    </div>
+                </div>
+                <div class="footer2">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="footerLogo">
+                                <a href="<?php bloginfo('home'); ?>"><img src="<?php the_field('footer_logo','options'); ?>" alt=""></a>
+                                <span>&copy; <?php echo date('Y'); ?></span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                        	<?php dynamic_sidebar('footer_5'); ?>
+                            
+                        </div>
+                        
+                         <div class="col-sm-2">
+                            <div class="footerMenu">
+                                <ul>
+                                    
+                                    <li><a href=""><?php _e('Back to top'); ?> <img class="topArrow" src="<?php echo get_template_directory_uri(); ?>/assets/img/iconUpward.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- / FOOTER -->
+    
+    </div>
+    <!-- / WRAPPER -->
+    
+    
+    <!-- script -->
+    
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/owl.carousel/owl.carousel.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"> </script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/date.picker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/custom.js"></script>
+    <script>
+        jQuery(function () {
+            jQuery('#datetimepicker4').datetimepicker();
+            jQuery('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:false,
+                        dots:true
+                    },
+                    800:{
+                        items:2,
+                        nav:false,
+                        dots:true
+                    },
+                     1000:{
+                        items:3,
+                        nav:false,
+                        dots:true
+                    },
+                    1200:{
+                        items:4,
+                        nav:false,
+                        loop:false,
+                        dots:true
+                    }
+                }
+            })
+        });    
+    </script>
+
+
+    <?php wp_footer(); ?>
+</body>
+</html>

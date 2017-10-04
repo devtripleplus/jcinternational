@@ -1,0 +1,343 @@
+
+jQuery('.navbar-toggle').on('click', function(){
+    jQuery('#bs-example-navbar-collapse-1').toggleClass('hidden2');
+});
+
+jQuery('a[href*="#"]:not([href="#"])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = jQuery(this.hash);
+                target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    jQuery('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+          
+          
+jQuery(function(){
+
+jQuery(".bannerForm .bannerBottom .bannerCols1 .number input[name='adult']").blur(function(){
+if(jQuery(this).val()<1){
+jQuery(this).val(1);
+}
+});
+
+
+jQuery(".bannerForm .bannerBottom .bannerCols1 .number input[name='child'],.bannerForm .bannerBottom .bannerCols1 .number input[name='infant']").blur(function(){
+if(jQuery(this).val()<0){
+jQuery(this).val(0);
+}
+});
+
+
+    var regExp = /^[0-9]{1,10}$/;
+  jQuery('.noAlpha').on('keypress', function(e) {
+
+    var value = String.fromCharCode(e.which) || e.key;
+
+    // No letters
+    if (!regExp.test(value)) {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+      jQuery(".bannerForm .bannerBottom .bannerCols1 .number .decrease").click(function(){
+         var val=parseInt(jQuery(this).parent().find('input').val())-1;
+          if(jQuery(this).parent().find("input").attr("name")=="adult"){
+            if(val<1){val=1}
+            }else{
+                          if(val<0){val=0;}
+            }
+          jQuery(this).parent().find('input').val(val);
+      });
+          
+      jQuery(".bannerForm .bannerBottom .bannerCols1 .number .increase").click(function(){
+         var val=parseInt(jQuery(this).parent().find('input').val())+1;
+          jQuery(this).parent().find('input').val(val);
+      });
+    
+    jQuery(".promoCode p label").click(function(){
+        jQuery(this).parent().parent().toggleClass('active');
+    });
+    
+jQuery(".bannerCols .c-chkbox .chkbox label").click(function(){
+if(jQuery(this).attr("for")=="checkboxselect2"){
+    jQuery("#datetimepicker4").closest('.bannerCols').addClass("hidden");
+    jQuery("#datetimepicker5").closest('.bannerCols').addClass("hidden");
+    jQuery("#datetimepicker6").closest('.bannerCols').removeClass("hidden");
+}
+        
+else{
+    jQuery("#datetimepicker4").closest('.bannerCols').removeClass("hidden");
+    jQuery("#datetimepicker5").closest('.bannerCols').removeClass("hidden");
+    jQuery("#datetimepicker6").closest('.bannerCols').addClass("hidden");
+}
+});
+});
+
+jQuery(function () {
+  var today = new Date();
+    jQuery('#datetimepicker4').datepicker({
+        dateFormat: "dd M yy",
+        separator:'/',
+        minDate: today
+    });
+    
+    jQuery('#datetimepicker6').datepicker({
+        dateFormat: "dd M yy",
+        separator:'/',
+        minDate: today
+    });
+
+
+    jQuery("#datetimepicker4").bind("change paste keyup", function() {
+        var returnDate1 = jQuery("#datetimepicker4").val();
+        var returnDate12 = new Date(returnDate1);
+        console.log(returnDate12);
+        jQuery('#datetimepicker5').datepicker({
+            dateFormat: "dd M yy",
+            separator:'/',
+            minDate: returnDate12
+            
+        }); 
+         setTimeout(function(){  
+           jQuery('#datetimepicker5').trigger('focus');
+         },500);
+    });
+    jQuery(".forminputsubscrip").blur(function(){
+     jQuery(".formErrorContent").show();
+    });
+    jQuery(".forminputsubscrip").focus(function(){
+      jQuery(".formErrorContent").show();
+    });
+    jQuery(".forminputsubscrip").keyup(function(){
+      jQuery(".formErrorContent").hide();
+    });
+
+//
+//    jQuery('body').on('change','#datetimepicker4', function(){
+//        alert()
+//           jQuery('#datetimepicker5').trigger('focus');
+//    });
+//    
+    
+    
+});
+
+jQuery(function () {
+    
+    jQuery('#datetimepicker7').datetimepicker({
+                viewMode: 'years',
+                format: 'MMM YYYY'
+            });
+    
+    
+//    jQuery('#datetimepicker7').multiDatesPicker({
+//        maxPicks: 1,
+//        dateFormat: "mm/yy"
+//    });
+//    
+
+    jQuery('#datetimepicker9, #datetimepicker8').multiDatesPicker({
+        maxPicks: 1,
+        dateFormat: "yy-mm-dd"
+    });
+
+    
+    jQuery('#myInput').focusin(function(){
+        jQuery('#myUL').show();
+        jQuery('#myUL2').hide();
+    });
+    jQuery('#myInput2').focusin(function(){
+        jQuery('#myUL').hide();
+        jQuery('#myUL2').show();
+    });
+
+
+    
+    jQuery('body').on('click', '.city', function(e){
+        e.preventDefault();
+//        if(jQuery(this).hasClass("city"))
+            var cVal=jQuery(this).attr("data-info");
+            var cVal1=jQuery(this).attr("data-value");
+            var count = jQuery(this).attr("data-counter");
+            console.log(cVal1);
+            jQuery('#myInput').val(cVal);
+            jQuery('#myInput').attr("data-info", cVal1);
+            jQuery('#myInput').attr("data-value", count);
+            jQuery('#myUL').hide();
+//        
+        
+    });
+    
+    jQuery('body').on('click', '.city2', function(e){
+        e.preventDefault();
+//        if(jQuery(this).hasClass("city"))
+            
+            var cVal=jQuery(this).attr("data-info");
+            var cVal1=jQuery(this).attr("data-value");
+            console.log(cVal1);
+            console.log(cVal);
+            jQuery('#myInput2').val(cVal);
+            jQuery('#myInput2').attr("data-info", cVal1);
+            jQuery('#myUL2').hide();
+//        
+        
+    });
+    
+    jQuery('body').on('click', '*', function(e){
+        e.stopPropagation();
+        console.log(jQuery(this).attr("class"));
+        if(curLanguage == 'khm'){
+          curLanguage = 'km';
+        }
+        else if(curLanguage == 'zh-hans'){
+          curLanguage = 'zh';
+        }
+        else
+        {
+          curLanguage = 'en';
+        }
+        if(jQuery(this).hasClass("bannerInputCity") || jQuery(this).hasClass("bannerInputArrow1")){
+          console.log(airports);
+            jQuery.ajax({
+              url:"http://wecodelogix.com/jcinternational/location-from-ond-js/",
+              type: 'POST',
+              data:{initial: 'origin',airports: airports, curLanguage: curLanguage},
+              success: function(data){
+
+               jQuery("#myUL").html(data);
+              }
+            });
+            jQuery('#myUL').show();
+        }
+        else if(jQuery(this).hasClass("bannerInputArrow1")){
+            console.log("called If1");
+             if(jQuery('#myUL').is(":hidden")){
+                jQuery('#myUL').show();
+                 jQuery('#myUL2').hide();
+                
+            }
+            else{
+                jQuery('#myUL').hide();
+                jQuery('#myUL2').hide();
+            }
+        }
+        
+        else if(jQuery(this).hasClass("bannerInputCity2") || jQuery(this).hasClass("bannerInputArrow2")){
+            console.log(jQuery("#myInput").attr("data-value"));
+            var from = jQuery("#myInput").val();
+            var counter = jQuery("#myInput").attr("data-value");
+            jQuery.ajax({
+              url:"http://wecodelogix.com/jcinternational/location-from-ond-js/",
+              type: 'POST',
+              data:{initial: 'destination',counter: counter, airports: airports, from: from, curLanguage: curLanguage, origins: origins},
+              success: function(data){
+               jQuery("#myUL2").html(data);
+              }
+            });
+            jQuery('#myUL2').show();
+        }
+        else if(jQuery(this).hasClass("bannerInputArrow2")){
+            console.log("called If22");
+           
+            if(jQuery('#myUL2').is(":hidden")){
+                jQuery('#myUL2').show();
+                 jQuery('#myUL').hide();
+            }
+            else{
+                jQuery('#myUL2').hide();
+                jQuery('#myUL').hide();
+            }
+        }
+
+        else{
+            console.log("called else");
+            jQuery('#myUL').hide();
+            jQuery('#myUL2').hide();
+        }
+    });
+
+
+   jQuery("#formbuttonsub").click( function(){
+      var showlet = jQuery('input[name=showlet]:checked').val();
+      var from = jQuery('input[name=from]').attr('data-info');
+      var to = jQuery('input[name=to]').attr('data-info');
+      console.log(from);
+      console.log(to);
+      if(curLanguage == 'khm'){
+        curLanguage = 'km';
+      }
+      if(curLanguage == 'zh-hans'){
+        curLanguage = 'zh';
+      }
+
+      var depdatetime = new moment(jQuery('input[name=depdatetime]').val());
+      depdatetime = depdatetime.format("DD-MM-YYYY");
+      var returndatetime = new moment(jQuery('input[name=returndatetime]').val());
+      returndatetime = returndatetime.format("DD-MM-YYYY");
+      var depdatetime1 = new moment(jQuery('input[name=depdatetime1]').val());
+      depdatetime1 = depdatetime1.format("DD-MM-YYYY")
+      var adult = jQuery('input[name=adult]').val();
+      var child = jQuery('input[name=child]').val();
+      var infant = jQuery('input[name=infant]').val();
+      var cabin = jQuery('#cabinClass option:selected').val();
+      var promocode = jQuery('input[name=promocode]').val();
+      if(showlet == 1){
+        var redirecturl = 'https://qddemo.isaaviations.com/service-app/ibe/reservation.html#/fare/'+ curLanguage +'/USD/KH/' + from + '/' + to + '/' + depdatetime1 + '/' + adult + '/' + child + '/' + infant + '/' + cabin + '/' + promocode;
+        window.open(redirecturl, '_self');
+         
+      }else{
+        var redirecturl = 'https://qddemo.isaaviations.com/service-app/ibe/reservation.html#/fare/'+ curLanguage +'/USD/KH/' + from + '/' + to + '/' + depdatetime + '/' + returndatetime + '/' + adult + '/' + child + '/' + infant + '/' + cabin + '/' + promocode;
+        window.open(redirecturl, '_self');
+      }
+
+   }); 
+
+
+   jQuery("#flightschedule").click( function(){
+      var from1 = jQuery('input[name=from]').attr('data-info');
+      var to1 = jQuery('input[name=to]').attr('data-info');
+      var startDate = new moment(jQuery('input[name=startDate]').val());
+      startDate = startDate.format("MM/YYYY");
+      var roundtrip = jQuery('input[name=roundtrip]').val();
+      if(curLanguage == 'khm'){
+        curLanguage = 'km';
+      }
+      if(curLanguage == 'zh-hans'){
+        curLanguage = 'zh';
+      }
+      if(roundtrip){
+        roundtrip = 'true';
+      }
+      else{
+        roundtrip = 'false';
+      }
+      var redirecturl = 'http://qddemo.isaaviations.com/ibe/public/showFlightSchedule.action?startDate='+ startDate +'&fromDst=' + from1 + '&toDst=' + to1 + '&roundTrip=' + roundtrip + '&lang='+ curLanguage; 
+      window.open(redirecturl, '_self');
+   });
+
+
+    jQuery(".dropdown-parent, .dropDownBox").hover(function(){
+        jQuery(".dropDownBox").addClass("active");
+    },function(){
+        jQuery(".dropDownBox").removeClass("active");
+    });
+    
+    if(jQuery(window).width()<768){
+        jQuery(".dropdown-parent").append("<div class='dropDownBox'>"+jQuery(".dropDownBox").html()+"</div>");
+    }
+    
+});
+
+
+
+
+
+
+
+    

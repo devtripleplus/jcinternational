@@ -1,0 +1,456 @@
+@charset "utf-8";
+/* <<HEADER>> */
+.mainHeader {
+   padding: 0 0 15px 0;
+        border-bottom: 2px solid #cdb9d2;
+}
+
+
+.nopadding{padding: 0 !important;}
+.nopaddingLR{padding-left: 0 !important;padding-right: 0 !important;}
+
+.mainHeader ul li{font-weight: 300;display: inline-block;font-size: 16px;padding: 30px 15px;}
+.mainHeader ul li>a{    font-size: 18px;
+    color: #283891;
+    font-weight: 300;
+    padding: 0 5px;
+    transition: all 0.2s linear;
+    font-family: 'Avenir Medium';
+}
+
+.mainHeader ul li>a:hover{    color: #ed1c24;    background-color: transparent;}
+.mainHeader ul li>a.active{background: none;}
+.mainHeader .navbar-brand{padding:15px 0;height:auto;display: inline-block;margin: 0 auto;}
+
+.mainHeader ul li select{background-color: transparent;border: 1px solid #7a7ba5;color: #8293a5;font-size: 14px;background-position: top 17px right 10px;width: 54px;border-radius: 3px;margin-top: -10px;}
+
+@media(max-width:1199px){
+    .mainHeader .navbar-brand{float: none;}
+    .mainHeader .navbar-header{display: block;margin: 0 auto;width: 100%;text-align: center;}
+    .mainHeader .navbar-nav{float: none!important;text-align: center;display: inline-block;}
+    .mainHeader .navbar-collapse{text-align: center;}
+    .page-breadcrumb .breadcrumb{text-align: center;}
+}
+
+@media(max-width:991px){
+.mainHeader ul li>a {
+        font-size: 16px;
+    padding: 15px 15px;
+}
+}
+@media(max-width:767px){
+.mainHeader .navbar-nav {
+        float: none!important;
+    text-align: center;
+    display: block;
+    background-color: #efefef;
+    padding: 0;
+}
+.mainHeader .navbar-brand {float: left;}
+.mainHeader .navbar-brand img{width:200px;}    
+.mainHeader ul li{display: block;float: none;padding: 15px 10px;}   
+.navbar-toggle {
+        position: relative;
+    float: right;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: rgb(46, 49, 146);
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+} 
+.navbar-toggle .icon-bar {display: block;width: 22px;height: 2px;border-radius: 1px;background-color: #fff;}
+.mainHeader #mobileNav{background-color: transparent;float: right!important;margin-right: 10px;}
+.mainHeader #mobileNav li{display: inline-block;padding: 15px 5px;}
+}
+
+@media(max-width:600px){
+    .top-header nav.nav-2{display: none;}
+}
+
+/* <<BANNER>> */
+
+#banner {background-image: url(../img/banners/1.png);-webkit-background-size: cover;
+background-size: cover;padding: 200px 0 100px 0;}
+#banner #bannerTtl {margin-bottom: 40px;}
+#banner #bannerTtl img{display: block;margin: 0 auto;}
+#banner .bannerForm .bannerTop{background-image: url(../img/bannerFormBg.png);background-repeat: no-repeat;position: relative;}
+#banner .bannerForm .bannerTop .bannerTopIn{position: absolute;top: 0;left: 0;padding-left: 20px;padding-top: 10px;}
+#banner .bannerForm .bannerTop .bannerTopIn img{margin-right: 10px;display: inline-block;vertical-align: middle;}
+#banner .bannerForm .bannerTop .bannerTopIn span{font-size: 18px;color: #2e3192;display: inline-block;vertical-align: middle; font-family: 'Avenir Medium'!important;}
+#banner .bannerForm .bannerBottom{padding: 15px 10px;background-color: #fff;}
+#banner .bannerForm .bannerBottom .bannerCols{float: left;padding: 0 10px;}
+#banner .bannerForm .bannerBottom .bannerCols.bannerCols21{width: 21%;position: relative;}
+#banner .bannerForm .bannerBottom .bannerCols.bannerCols16{width: 16%;position: relative;}
+#banner .bannerForm .bannerBottom .c-chkbox{width: 50%;float: left;margin-top: 7px;}
+#banner .bannerForm .bannerBottom .c-chkbox label{color: #2e3192;}
+
+@media(max-width:1199px){
+    #banner {padding: 100px 0 100px 0;}
+    #banner .bannerForm .bannerBottom .bannerCols.bannerCols21{width: 27%;position: relative;}
+    #banner .bannerForm .bannerBottom .bannerCols.bannerCols1{width: 100%;padding-bottom: 11px;}
+    #banner .bannerForm .bannerBottom .bannerCols.bannerCols1 .c-chkbox{width: 15%;float: left;}
+
+}
+
+@media(max-width:991px){
+    #banner {padding: 100px 0 100px 0;}
+    #banner .bannerForm .bannerBottom .bannerCols.bannerCols21{width: 33%;position: relative;}
+    #banner .bannerForm .bannerBottom .bannerCols.bannerCols1{width: 100%;padding-bottom: 11px;}
+    #banner .bannerForm .bannerBottom .bannerCols.bannerCols1 .c-chkbox{width: 15%;float: left;}
+    #banner .bannerForm .bannerBottom .bannerCols.bannerCols16{width: 16%;position: relative;padding-top:15px}
+    #banner #bannerTtl img{display: block;margin: 0 auto;}
+}
+
+
+
+@media(max-width:767px){
+    #banner #bannerTtl img{width:300px}
+    #banner .bannerForm .bannerBottom .bannerCols.bannerCols1 .c-chkbox{width: 25%;float: left;}
+}
+
+@media(max-width:480px){
+    #banner {padding: 50px 0;}
+    #banner #bannerTtl img{width:200px;margin-bottom:20px}
+    #banner .bannerForm .bannerBottom .bannerCols.bannerCols1 .c-chkbox{width: 50%;float: left;}
+    #banner .bannerForm .bannerBottom .bannerCols.bannerCols21{width: 100%;position: relative;margin-bottom:10px}
+}
+
+
+
+#sOffers .sOffersIn{margin-top: 40px;}
+#sOffers .sOffersIn .sOffersTtl{}
+#sOffers .sOffersIn .sOffersIcon{margin-bottom: 20px;;}
+#sOffers .sOffersIn .sOffersIcon img{display: block;margin: 0 auto;}
+#sOffers .sOffersIn .sOffersTtl {text-align: center;}
+
+#eAsia .eAsiaIn{margin-top: 40px;}
+#eAsia .sectionHdr p{font-style: italic;color: #9aa1a7;}
+#eAsia .eAsiaIn .eAsiaInL{width: 55%;display: inline-block;vertical-align: middle;}
+#eAsia .eAsiaIn .eAsiaInR{width: 40%;display: inline-block;padding-left: 0px;vertical-align: middle;}
+#eAsia .eAsiaIn .eAsiaInfo {display: inline-block;vertical-align: middle;}
+#eAsia .eAsiaIn .eAsiaInfo h6{margin: 5px 0;}
+#eAsia .eAsiaIn .eAsiaInfo p{margin: 0;}
+#eAsia .eAsiaIn .eAsiaInfo p.txt-14{color: #5e5e5e;}
+#eAsia .eAsiaIn .eAsiaInfo p.txt-24{color: #2d3092; font-family: 'Avenir Medium'; }
+#eAsia .eAsiaIn .eAsiaInfo p.txt-24>span{color: #2d3092;font-family: 'Avenir Black'; }
+#eAsia .eAsiaIn .eAsiaInfo a{color: #ed1c24;font-family: 'Avenir Medium'; text-decoration: underline;}
+
+#eAsia .eAsiaIn  .eAsiaImg{display: inline-block;vertical-align: middle;width: 140px;height: 140px;border-radius: 50%;overflow: hidden;}
+#eAsia .eAsiaIn  .eAsiaImg img{display: block;margin: 0 auto;width: 100%;height: 100%;}
+
+#eAsia .owl-dots{display: block;text-align: center;margin-top: 40px;}
+#eAsia .owl-dots .owl-dot{width: 17px;height: 17px;border-radius: 50%;display: inline-block;border: 1px solid #c3c3c3;margin: 0 5px;}
+#eAsia .owl-dots .owl-dot.active{border:1px solid #2d3092;}
+
+#eDeals h2{color: #ed1c24;}
+#eDeals h2+p{margin-bottom: 30px;}
+#eDeals h2+p>a{color: #2e3192;font-family: 'Avenir Medium'; }
+
+#eDeals h2>span{color: #2e3192;}
+
+
+#eDeals .gCols {}
+#eDeals .gCols .gColsIn{position: relative;overflow: hidden;background-color: #333;}
+#eDeals .gCols .gColsIn a> img{width: 100%;transition: all 0.5s linear;}
+#eDeals .gCols .gColsIn:hover a > img{transform: scale(1.1);opacity: 0.5}
+
+#eDeals .gCols .gColsIn .gColsInfo {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);text-align: center;width: 100%;}
+#eDeals .gCols .gColsIn .gColsInfo .txt-30{font-family: 'Avenir Book';}
+#eDeals .gCols .gColsIn .gColsInfo .txt-30>span{font-family: 'Avenir Black';}
+#eDeals .gCols .gColsSmall .txt-22{margin-bottom: 0;}
+
+#newsSocial .sectionHdr{padding-bottom: 20px;}
+
+#newsSocial .sectionInfo .sButton{margin-left: -15px;}
+#newsSocial .sectionInfo .findSocials li{display: inline-block;margin: 0 8px;}
+
+@media(max-width:767px){
+   #newsSocial .sectionHdr h3 small{display: block;} 
+}
+
+footer{background: rgba(46,49,147,1);background: -moz-linear-gradient(top, rgba(46,49,147,1) 0%, rgba(46,49,147,1) 83%, rgba(56,48,141,1) 85%, rgba(134,41,97,1) 100%);background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(46,49,147,1)), color-stop(83%, rgba(46,49,147,1)), color-stop(85%, rgba(56,48,141,1)), color-stop(100%, rgba(134,41,97,1)));background: -webkit-linear-gradient(top, rgba(46,49,147,1) 0%, rgba(46,49,147,1) 83%, rgba(56,48,141,1) 85%, rgba(134,41,97,1) 100%);background: -o-linear-gradient(top, rgba(46,49,147,1) 0%, rgba(46,49,147,1) 83%, rgba(56,48,141,1) 85%, rgba(134,41,97,1) 100%);background: -ms-linear-gradient(top, rgba(46,49,147,1) 0%, rgba(46,49,147,1) 83%, rgba(56,48,141,1) 85%, rgba(134,41,97,1) 100%);background: linear-gradient(to bottom, rgba(46,49,147,1) 0%, rgba(46,49,147,1) 83%, rgba(56,48,141,1) 85%, rgba(134,41,97,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e3193', endColorstr='#862961', GradientType=0 );}
+
+footer h3, footer h4,footer ul li,footer ul li>a{color: #fff}
+footer ul li>a:hover{text-decoration: underline;color: #fff}
+footer h4{padding: 10px 0 20px 0;font-family: 'Avenir Book'!important;}
+footer ul li{margin-bottom: 26px;font-family: 'Avenir Book'!important;}
+footer ul li>a{font-size: 16px;color: #e0e0ec;font-family: 'Avenir Book'!important;}
+footer .footer1{padding: 50px 0;}
+footer .footer1 .footer1Info{padding-top: 20px;border-top: 2px solid #4a4da2;margin-top: 30px;}
+
+footer .footer1 .lControl p{color: #fff;/* margin-top: 5px; */}
+footer .footer1 .lControl select{background-image: url(../img/iconDownArrow.png);background-position: top 17px right 15px;background-repeat: no-repeat;color: #2e3192;margin-top: -15px;}
+
+footer .footer2{padding-bottom: 120px;}
+footer .footer2 .footerLogo img{margin-right: 40px;}
+footer .footer2 span{color: #fff;font-size: 16px;}
+footer .footer2 .footerMenu {margin-top: 15px;}
+footer .footer2 .footerMenu li{display: inline-block;margin: 0 15px;}
+footer .footer2 .footerMenu li >a{font-size: 14px;}
+footer .footer2 .footerMenu .topArrow{margin-left: 20px}
+
+@media(max-width:767px){
+  footer .footer1 .lControl select{margin-top: 15px;margin-bottom:15px}
+  footer .footer2 .footerLogo img{width:200px;}
+}
+
+/*======About Us============*/
+
+#aboutPage .sectionHdr a{color:#ed1c24;font-size: 18px;font-weight: bold;line-height: 24px;text-decoration: none !important;}
+#aboutPage .sectionHdr a img{margin-top: -3px;margin-right: 20px;transition-duration: 0.5s;}
+#aboutPage .sectionHdr a:hover img{margin-right: 10px;}
+#aboutPage .sectionInfo p{margin-bottom: 47px;}
+#aboutPage .sectionInfo p{font-size: 18px;color: #2f2f2f;}
+#aboutPage .sectionInfo .aboutImg {margin-bottom: 30px;}
+#aboutPage .sectionInfo .aboutImg img{max-width: 100%;width: auto;height: auto;max-height: 100%;}
+#aboutPage .sectionInfo .aInfoHdr{margin-bottom: 30px;position: relative;}
+#aboutPage .sectionInfo .aInfoHdr h3 > a{position: static;float: right;display: inline-block;}
+
+.sideBar{margin-top: 40px;}
+.sideBar .widget{padding: 30px;margin-bottom: 40px;}
+.redListIcon li{background: url(../img/list-red-icon.png) no-repeat left center;padding-left: 30px;line-height: 48px;font-size: 18px;}
+.lightGray{background: #f3f5f6;}
+
+.sideBar .widget h3{
+    color: #ed1c24;
+    font-size: 24px;
+    padding-left: 80px;    
+    margin-bottom: 20px;
+    min-height: 55px;
+    display: table;
+}
+
+.sideBar .widget h3 span{    
+    display: table-cell;
+    vertical-align: bottom;
+    }
+
+.sideBar .widget p{font-size: 18px;line-height: 30px;min-height: 170px;}
+.sideBar .widget h3.wifiIcon{background: url(../img/wifi-icon.png) no-repeat left top;}
+.sideBar .widget h3.entertainment{background: url(../img/entertain-video-icon.png) no-repeat left top;}
+
+.sideBar .widget h6 a{font-size: 18px;color:#ed1c24;border-bottom: 1px solid #ed1c24;padding:0px 0;line-height: 26px;}
+
+.topHeading{padding: 15px 0 0 0 !important;}
+.topHeading .sectionHdr{margin-top: 20px;}
+.topHeading .sectionHdr hr{background: none !important;margin: 0 !important;border: 0 !important;}
+.topHeading .sectionHdr h1,
+.topHeading .sectionHdr a{font-weight: bold;}
+
+.btm-margin25{margin-bottom: 25px;}
+.btm-margin40{margin-bottom: 40px;}
+.refineRowgs p.refineGs{
+    font-size: 18px;
+    color: #2f2f2f;
+    line-height: 30px;
+    margin: 16px 0 30px 0;
+    font-weight: 400;
+}
+
+.refineRowgs p.refineGs span{margin:0 10px;font-family: 'Avenir Medium';}
+.refineRowgs p.refineGs span:first-child{margin-left: 0px;}
+.refineRowgs p.refineGs span select.formInput{
+    padding: 5px 35px 5px 15px;
+    text-align-last: center;color:#2e3192;border: 1px solid #899fa9 !important;width: auto !important;display: inline;
+    background-image: url(../img/iconDownArrow.png);    
+    font-family: 'Avenir Medium';
+    margin-bottom: 5px;
+}
+
+.FlightDetail table th,
+.FlightDetail table td{font-size: 24px;color:#414247;font-family: 'Avenir Medium';text-align: left !important;}
+.FlightDetail table td:first-child{width: 150px;text-align: left;}
+.FlightDetail table td[colspan='2']{width: 600px;}
+
+.FlightDetail table td a.blueColor{color: #2e3192;border-bottom: 1px solid #2e3192;}
+.FlightDetail table tr td a{color:#ed1c24;border-bottom: 1px solid #ED1C24;text-decoration: none !important;}
+.FlightDetail table tr:first-child td a{color:#ed1c24 !important;border:0 !important;}
+
+.FlightDetail table td.width100px{width: 90px;text-align: left;}
+.FlightDetail table tr td:nth-child(2){text-align: left !important;}
+.FlightDetail table td{text-align: center;padding: 8px 0;}
+.FlightDetail table td small{font-size: 70%;}
+
+.FlightDetail table td.width20px{width: 20px;}
+.FlightDetail table td.arrowIcongs img{opacity: 0.66;}
+.FlightDetail table td.arrowIcongs a:hover img{opacity: 1;}
+
+
+#map {height: 710px;width: 100%;}
+
+@media(max-width:1199px){
+    .mainHeader ul>li{padding: 0 !important;}
+    .mainHeader ul li>a{font-size: 16px;padding: 15px 10px;}
+    .mainHeader .navbar-nav{margin-top: 12px;}
+    .mainHeader .navbar-header{width: auto !important;}
+    .navbar-brand > img{max-width: 300px;}
+    .mainHeader ul li select{margin-top: 5px;}
+    
+    .findSocials img{
+        width: 35px;
+    }
+    #newsSocial .sectionInfo .findSocials li{
+        margin: 0 5px;
+    }
+    .refineRowgs p.refineGs span{margin: 0px;}
+    .refineRowgs p.refineGs{font-size: 16px !important;}
+}
+
+@media(max-width:1023px){
+    
+    #aboutPage .sectionInfo .aInfoHdr > a{position: static;float: right;padding: 10px 15px;}
+    .findSocials img{
+        width: 30px;
+    }
+    
+    #newsSocial .sectionInfo .findSocials li{
+        margin: 0 2px;
+    }
+}
+
+@media(max-width:991px){
+    .container{width: 100%;}
+    
+    .mainHeader{padding: 0px !important;}       
+    .mainHeader .navbar-brand{padding: 15px 0 0 0  !important;}
+    .mainHeader ul li>a{font-size: 16px;padding: 15px 15px;}
+    .navbar-brand > img{max-width: 300px;}
+    .mainHeader .navbar-header{width: 100% !important;}
+    .mainHeader .navbar-nav{margin: 0 !important;}
+    
+    #newsSocial .sectionHdr{margin-top: 20px;}
+    
+    .sideBar .widget{padding: 15px 10px;}
+    .sideBar .widget h3{background-size: 40px !important;padding-left: 50px;background-position-y:10px !important; }
+    .sideBar .widget h3 span{font-size: 22px;}
+    
+    #aboutPage .sectionInfo .aInfoHdr h3 > a{float: none !important;}
+    .redListIcon li{
+        line-height: 28px;    
+        margin: 10px 0;
+    }
+    
+    .FlightDetail table td{font-size: 18px;}
+    
+    
+}
+    
+@media(max-width:767px){
+    #eAsia .sectionInfo .owl-stage-outer .item{text-align: center;}
+    #eAsia .eAsiaIn {
+        margin-top: 40px;
+        display: inline-block;
+    }
+    #eAsia .eAsiaIn .eAsiaInL {
+        width: auto;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 30px;
+    }
+    
+    #eAsia .eAsiaIn .eAsiaInfo{text-align: left;}
+    .sectionHdr p{text-align: center;}
+    
+    .mainHeader .navbar-brand {
+    padding: 15px 0 0 0 !important;
+    width: 100%;
+}
+    .mainHeader ul li select{margin: 15px 0px 0 10px;min-height:initial;}
+    .mainHeader #mobileNav{float: left !important;width: 120px !important;}    
+    .mainHeader .navbar-brand img {
+        max-width: 100%;
+        width: auto;
+    }
+    
+    #eDeals .gColsBig{margin-bottom: 30px;}
+    #eDeals .gColsBig .gColsInfo img{max-width: 30%;}
+    #newsSocial .sectionInfo .sButton{margin: 10px auto !important;}
+    
+    #newsSocial .sectionInfo{text-align: center;}
+    
+    .topHeading .routeMap img{width: 150px;}
+    .topHeading .sectionHdr{text-align: center;}
+    
+    h1{text-align: center;}
+    .FlightDetail{padding: 5px;}
+    .FlightDetail table td{font-size: 16px;}
+    .refinedData .col-sm-12{padding: 0 !important;}
+    
+    .refineRowgs p.refineGs span select.formInput{width: 100% !important;}
+}
+
+@media(max-width:580px){
+    .FlightDetail table td{font-size: 14px !important;padding: 2px;}
+}
+
+/*=========Map Location===========*/
+
+.locationDiv{width:325px;padding: 0px 25px;font-family: 'Avenir Medium'!important;padding-right: 0;}
+.locationDiv h3{color:#2e3192;font-size: 18px;font-family: 'Avenir Medium'!important;font-weight: 800;}
+.locationDiv h2{color:#ec1c23;font-size: 24px;font-weight: bold;}
+.locationDiv p{font-size: 16px;line-height: 30px;font-family: 'Avenir Medium'!important;margin-top: 15px;}
+.locationDiv h1{font-size: 35px;color: #2d3092}
+
+.locationDiv h1 a{float: right;font-size: 25px;color: #ec1c23;margin-top: 8px;font-weight: bold;}
+
+.nomargin{margin: 0 !important;}
+
+.manageBooking button,
+.manageBooking input{
+    min-width: 250px !important;
+    font-size: 18px !important;
+    min-height: 46px;
+    letter-spacing: 1px;
+    font-family: 'Avenir Medium'!important;
+    font-weight: 800;
+}
+
+.flightSheduleForm p{
+    clear: both;
+    margin-bottom: 15px !important;
+    display: inline-block;
+    }
+
+.flightSheduleForm p label{float: left;width: 158px;color: #2e3192;padding: 5px 0;} 
+.flightSheduleForm p>span{float: left;width: 328px;} 
+
+.flightSheduleForm p span input[type='checkbox']{display: none;}
+.flightSheduleForm p span input[type='checkbox'] + label{background: url(../img/checkbox.png) no-repeat center left;padding: 20px;}
+.flightSheduleForm p span input[type='checkbox']:checked + label{background: url(../img/checkbox-checked.png) no-repeat center left;}
+
+.imgCentergs img{margin: 0 auto;}
+
+@media(max-width:520px){
+    .flightSheduleForm p>span{width: 100%;}
+    .flightSheduleForm p{display: block;}
+}
+
+.myAcc{margin: 0px;padding: 0 !important;border: 0 !important;}
+.myAcc ul{margin: 0 !important;}
+.myAcc ul li{padding: 5px 0;margin: 5px;float: left;}
+.myAcc ul li a{
+    display: block;
+    text-align: center;
+    width: 114px;
+    font-size: 16px;
+        border: 1px solid #2f358f;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-decoration: none !important;
+}
+
+.myAcc ul li a i{font-size: 14px;}
+
+.myAcc ul li a:hover{
+    color: #fff;
+    background: #2f358f;
+}
+
+
+@media(max-width:992px){
+    .flightSheduleForm p>span{
+        width: 278px;
+    }
+}
